@@ -1,0 +1,47 @@
+$primary: #ffa500;
+$secondary: #f9f9f9;
+$success: #5cb85c;
+
+:root {
+  --primary: #{$primary};
+  --secondary: #{$secondary};
+  --success: #{$success};
+  --bg-color: #f4f4f5;
+  --bottom-nav-height: 68px;
+  --max-width: 720px;
+}
+
+@import "~bootstrap/scss/bootstrap.scss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.container {
+  max-width: 1170px !important;
+}
+
+.btn {
+  padding: 0.7rem 2.2rem;
+  font-weight: 600;
+  border-radius: 6px !important;
+}
+
+.btn-primary {
+  color: #fff;
+
+  &:hover,
+  &:active,
+  &:visited,
+  &:focus {
+    color: #fff;
+  }
+}
+
+.btn-light {
+  color: var(--primary);
+
+  &:hover,
+  &:active,
+  &:visited,
+  &:focus {
+    color: var(--primary);
+  }
+}
