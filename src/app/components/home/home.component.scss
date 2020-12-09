@@ -1,26 +1,28 @@
-header {
-  background-image: url("../../../assets/images/camera.jpg");
+.hero {
+  padding: 10rem 0;
+  color: #fff;
+  background-image: url("/assets/images/camera.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-}
-
-.hero {
-  padding: 6rem 0;
-  color: #fff;
 
   .wrapper {
     .heading {
-      font-size: 4.5rem;
-      line-height: 1.1;
-      margin-bottom: 1rem;
+      font-size: 4.25rem;
+      font-weight: 700;
+      line-height: 4.5rem;
     }
 
     .sub-heading {
-      font-size: 1.6rem;
+      margin-top: 1.5rem;
+      font-size: 1.625rem;
       font-weight: 300;
-      line-height: 1.3;
-      margin-bottom: 3.2rem;
+      line-height: 2.2rem;
+      color: rgba(#fff, 0.85);
+    }
+
+    .buttons {
+      margin-top: 2.5rem;
     }
 
     .btn-primary {
@@ -28,28 +30,29 @@ header {
     }
 
     .extra {
-      font-size: 0.8rem;
-      margin-top: 1.5rem;
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      line-height: 1.25rem;
+      color: rgba(#fff, 0.65);
     }
   }
 }
 
 .clients {
-  padding: 3rem 0;
+  padding-top: 6rem;
 
   .heading {
     text-align: center;
-    margin-top: 4rem;
-    color: #444;
-    font-weight: bold;
+    color: var(--muted);
+    font-weight: 700;
     text-transform: uppercase;
   }
 
   .logo-wrapper {
+    margin-top: 1.5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 2rem 0;
   }
 
   .logo {
@@ -57,66 +60,16 @@ header {
   }
 }
 
-.configure {
-  padding: 6rem 0;
-
-  .img-wrapper {
-    text-align: right;
-
-    .img {
-      width: 95%;
-      height: auto;
-      border-radius: 20px;
-    }
-  }
-}
-
 .features {
-  padding: 6rem 0;
-
   .wrapper {
-    margin-right: 3.5rem;
-
-    .icon {
-      height: 100px;
-      width: auto;
-    }
-
-    .title {
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    .info {
-      font-size: 0.9rem;
-      line-height: 24px;
-    }
+    margin-right: 3rem;
   }
 }
 
-.trusted {
-  padding: 10rem 0;
-  background-color: var(--secondary);
-
-  .img-wrapper {
-    .img {
-      width: 90%;
-      height: auto;
-    }
-  }
+.f1 {
+  padding-bottom: 6rem;
 }
 
-.action {
-  padding: 8rem 0;
-
-  .video-wrapper {
-    text-align: right;
-
-    .video {
-      width: 95%;
-      height: auto;
-      border-radius: 20px;
-    }
-  }
+.f2 {
+  padding-top: 6rem;
 }

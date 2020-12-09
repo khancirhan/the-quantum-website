@@ -1,16 +1,23 @@
 .title {
+  font-weight: 700;
   color: var(--primary);
   text-transform: uppercase;
 }
 
 .heading {
-  font-size: 2.5rem;
+  margin-top: 0.5rem;
+  font-size: 2.625rem;
   font-weight: 700;
+  line-height: 3rem;
 }
 
 .info {
-  font-size: 1.5rem;
+  margin-top: 1rem;
+  font-size: 1.375rem;
   font-weight: 300;
-  margin-bottom: 4rem;
-  line-height: 34px;
+  line-height: 2rem;
+}
+
+.btn {
+  margin-top: 2.5rem;
 }

@@ -1,15 +1,29 @@
 .navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   color: #ffffff;
-  padding: 30px 0;
+  padding: 20px 0;
   background-color: transparent;
+  z-index: 999;
 
   .navbar-brand {
     color: #fff;
     text-transform: uppercase;
   }
 
-  .navbar-nav {
-    margin-left: 10rem;
+  .nav-menu {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
 
   .nav-item {
@@ -22,8 +36,8 @@
 
   .btn-link-primary,
   .btn-primary {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding-top: 0.45rem;
+    padding-bottom: 0.45rem;
   }
 
   .btn-link-primary {

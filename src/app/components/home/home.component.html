@@ -1,36 +1,33 @@
 <div class="main-wrapper">
-  <!-- HEADER -->
-  <header>
-    <!-- NAVBAR -->
-    <app-navbar></app-navbar>
+  <!-- NAVBAR -->
+  <app-navbar></app-navbar>
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-7">
-            <div class="wrapper">
-              <h1 class="heading">Share progress across the globe</h1>
-              <h5 class="sub-heading">
-                Get access to your project site anytime, anywhere. Being used by
-                over two thousand people globally — from individuals, to the
-                largest companies.
-              </h5>
-              <div>
-                <button class="btn btn-primary">Buy Now</button>
-                <button class="btn btn-outline-light">See pricing</button>
-              </div>
-              <div class="extra">
-                Our systems are built extra-tough for the any jobsite.
-                <br />
-                The units are able to operate in extreme temperatures.
-              </div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <div class="wrapper">
+            <h1 class="heading">Share progress across the globe</h1>
+            <h5 class="sub-heading">
+              Get access to your project site anytime, anywhere. Being used by
+              over two thousand people globally — from individuals, to the
+              largest companies.
+            </h5>
+            <div class="buttons">
+              <button class="btn btn-primary">Buy Now</button>
+              <button class="btn btn-outline-light">See pricing</button>
+            </div>
+            <div class="extra">
+              Our systems are built extra-tough for the any jobsite.
+              <br />
+              The units are able to operate in extreme temperatures.
             </div>
           </div>
         </div>
       </div>
-    </section>
-  </header>
+    </div>
+  </section>
 
   <!-- CLIENTS -->
   <section class="clients">
@@ -47,31 +44,27 @@
     </div>
   </section>
 
-  <!-- Configure -->
+  <!-- CONFIGURE -->
   <section class="configure">
     <div class="container">
-      <div class="row">
-        <div class="col-md-4">
+      <div class="flexbox">
+        <div class="flex-33">
           <div class="wrapper">
-            <div class="wrapper">
-              <app-aside-overview>
-                <ng-container id="title">Configure</ng-container>
-                <ng-container id="heading">
-                  Smart TimeLapse System
-                </ng-container>
-                <ng-container id="info">
-                  With an intuitive interface, thoughtful features and a
-                  powerful controller, you can stay focused on managing your
-                  projects remotely.
-                </ng-container>
-                <ng-container id="btnText">Learn More</ng-container>
-              </app-aside-overview>
-            </div>
+            <app-aside-overview>
+              <ng-container id="title">Configure</ng-container>
+              <ng-container id="heading"> Smart TimeLapse System </ng-container>
+              <ng-container id="info">
+                With an intuitive interface, thoughtful features and a powerful
+                controller, you can stay focused on managing your projects
+                remotely.
+              </ng-container>
+              <ng-container id="btnText">Learn More</ng-container>
+            </app-aside-overview>
           </div>
         </div>
-        <div class="col-md-8">
-          <div class="img-wrapper">
-            <img class="img" src="assets/test.png" alt="Dashboard Image" />
+        <div class="flex-66">
+          <div class="img-wrapper align-right">
+            <img src="assets/test.png" alt="Dashboard Image" />
           </div>
         </div>
       </div>
@@ -79,7 +72,7 @@
   </section>
 
   <!-- FEATURES -->
-  <section class="features">
+  <section class="features f1">
     <div class="container">
       <div class="row">
         <div class="col-md-4">
@@ -132,19 +125,10 @@
   </section>
 
   <!-- TRUSTED -->
-  <section class="trusted">
+  <section class="trusted bg-secondary">
     <div class="container">
-      <div class="row">
-        <div class="col-md-8">
-          <div class="img-wrapper">
-            <img
-              class="img"
-              src="assets/images/camera.jpg"
-              alt="Camera Image"
-            />
-          </div>
-        </div>
-        <div class="col-md-4">
+      <div class="flexbox row-reverse">
+        <div class="flex-33">
           <div class="wrapper">
             <app-aside-overview>
               <ng-container id="title">The Beast</ng-container>
@@ -159,12 +143,21 @@
             </app-aside-overview>
           </div>
         </div>
+        <div class="flex-66">
+          <div class="img-wrapper">
+            <img
+              class="img"
+              src="assets/images/camera.jpg"
+              alt="Camera Image"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- FEATURES -->
-  <section class="features">
+  <section class="features f2">
     <div class="container">
       <div class="row">
         <div class="col-md-4">
@@ -223,8 +216,8 @@
   <!-- ACTION -->
   <section class="action">
     <div class="container">
-      <div class="row">
-        <div class="col-md-4">
+      <div class="flexbox">
+        <div class="flex-33">
           <div class="wrapper">
             <app-aside-overview>
               <ng-container id="title">Video</ng-container>
@@ -238,8 +231,8 @@
             </app-aside-overview>
           </div>
         </div>
-        <div class="col-md-8">
-          <div class="video-wrapper">
+        <div class="flex-66">
+          <div class="img-wrapper align-right">
             <img src="assets/images/camera.jpg" alt="" class="video" />
           </div>
         </div>
@@ -249,7 +242,7 @@
 
   <!-- GET STARTED -->
   <section class="started">
-    <app-overlay>
+    <app-banner>
       <ng-container id="heading">
         Get started with TheQuantum today
       </ng-container>
@@ -257,7 +250,7 @@
         Monitor your construction sites from anywhere, anytime.
       </ng-container>
       <ng-container id="btnText"> Learn More </ng-container>
-    </app-overlay>
+    </app-banner>
   </section>
 
   <!-- FOOTER -->
