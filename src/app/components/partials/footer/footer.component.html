@@ -33,15 +33,7 @@
             <div class="footer-link-title">{{ f.title }}</div>
             <div>
               <ng-container *ngFor="let l of f.links">
-                <a *ngIf="l.external" [href]="l.path" class="footer-link">
-                  {{ l.text }}
-                </a>
-
-                <a
-                  *ngIf="!l.external"
-                  [routerLink]="l.path"
-                  class="footer-link"
-                >
+                <a [href]="l.href" class="footer-link">
                   {{ l.text }}
                 </a>
               </ng-container>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-footer',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent implements OnInit {
+  private url = environment.url;
+
   constructor() {}
 
   footerLinks = [
@@ -14,13 +17,11 @@ export class FooterComponent implements OnInit {
       links: [
         {
           text: 'TheQuantum Air',
-          path: '',
-          external: false,
+          href: this.url,
         },
         {
           text: 'TheQuantum Pro',
-          path: '/the-quantum-pro',
-          external: false,
+          href: this.url + '/the-quantum-pro',
         },
       ],
     },
@@ -29,13 +30,11 @@ export class FooterComponent implements OnInit {
       links: [
         {
           text: 'TQDash',
-          path: '',
-          external: true,
+          href: '',
         },
         {
           text: 'ProgressCenter',
-          path: '',
-          external: true,
+          href: '',
         },
       ],
     },
@@ -44,13 +43,11 @@ export class FooterComponent implements OnInit {
       links: [
         {
           text: 'F.A.Q.',
-          path: '/faqs',
-          external: false,
+          href: this.url + '/faqs',
         },
         {
           text: 'Get Help',
-          path: '/get-help',
-          external: false,
+          href: this.url + '/get-help',
         },
       ],
     },
@@ -59,13 +56,11 @@ export class FooterComponent implements OnInit {
       links: [
         {
           text: 'About Us',
-          path: '/about-us',
-          external: false,
+          href: this.url + '/about-us',
         },
         {
           text: 'Press',
-          path: '',
-          external: false,
+          href: this.url + '',
         },
       ],
     },
@@ -74,13 +69,11 @@ export class FooterComponent implements OnInit {
       links: [
         {
           text: 'Facebook',
-          path: 'https://www.facebook.com',
-          external: true,
+          href: 'https://www.facebook.com',
         },
         {
           text: 'Twitter',
-          path: 'https://www.twitter.com',
-          external: true,
+          href: 'https://www.twitter.com',
         },
       ],
     },
@@ -89,13 +82,11 @@ export class FooterComponent implements OnInit {
       links: [
         {
           text: 'Privacy Policy',
-          path: '/privacy-policy',
-          external: false,
+          href: this.url + '/privacy-policy#policy',
         },
         {
           text: 'Terms & Conditions',
-          path: '',
-          external: false,
+          href: this.url + '/privacy-policy#terms-and-conditions',
         },
       ],
     },
