@@ -1,0 +1,39 @@
+@import "src/assets/scss/form";
+
+.get-help {
+  padding: 9rem 0 6rem;
+  background-color: var(--secondary);
+
+  .card {
+    position: relative;
+    border-radius: 30px;
+    border: 0;
+
+    .card-body {
+      padding: 5rem 8.6rem;
+    }
+  }
+
+  .heading {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .sub-heading {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 32px;
+    margin-bottom: 3rem;
+  }
+
+  .btn {
+    margin-top: 2rem;
+    padding: 0.4rem 3.5rem;
+  }
+}
+
+.form label {
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.65) !important;
+}

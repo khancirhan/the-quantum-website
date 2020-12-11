@@ -1,29 +1,29 @@
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { HomeComponent } from './components/home/home.component';
-import { BaseLayoutComponent } from './components/base-layout/base-layout.component';
-import { AsideOverviewComponent } from './components/aside-overview/aside-overview.component';
-import { FeatureComponent } from './components/feature/feature.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { BannerComponent } from './components/banner/banner.component';
-import { TheQuantumProComponent } from './components/the-quantum-pro/the-quantum-pro.component';
-import { FaqComponent } from './components/faq/faq.component';
 import { AboutComponent } from './components/about/about.component';
-import { PricingComponent } from './components/pricing/pricing.component';
-import { PlaceOrderComponent } from './components/place-order/place-order.component';
+import { FaqComponent } from './components/faq/faq.component';
+import { GetHelpComponent } from './components/get-help/get-help.component';
+import { HomeComponent } from './components/home/home.component';
 import { OrderConfirmedComponent } from './components/order-confirmed/order-confirmed.component';
+import { AsideOverviewComponent } from './components/partials/aside-overview/aside-overview.component';
+import { BackgroundShowcaseComponent } from './components/partials/background-showcase/background-showcase.component';
+import { BannerComponent } from './components/partials/banner/banner.component';
+import { FeatureComponent } from './components/partials/feature/feature.component';
+import { FooterComponent } from './components/partials/footer/footer.component';
+import { NavbarComponent } from './components/partials/navbar/navbar.component';
+import { PlaceOrderComponent } from './components/place-order/place-order.component';
+import { PricingComponent } from './components/pricing/pricing.component';
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
+import { TheQuantumProComponent } from './components/the-quantum-pro/the-quantum-pro.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    BaseLayoutComponent,
     AsideOverviewComponent,
     FeatureComponent,
     FooterComponent,
@@ -35,6 +35,8 @@ import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-poli
     PlaceOrderComponent,
     OrderConfirmedComponent,
     PrivacyPolicyComponent,
+    GetHelpComponent,
+    BackgroundShowcaseComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

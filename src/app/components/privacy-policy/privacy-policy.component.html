@@ -1,1 +1,55 @@
-<p>privacy-policy works!</p>
+<div class="main-wrapper">
+  <!-- NAVBAR -->
+  <app-navbar [background]="'white'"></app-navbar>
+
+  <!-- Privacy Policy -->
+  <section class="policy">
+    <div class="container">
+      <h1 class="heading">Privacy Policy</h1>
+      <h5 class="sub-heading">EFFECTIVE DATE: NOVEMBER 30, 2020</h5>
+      <p class="message">
+        Welcome to TheQuantum. TheQuantum ("us", "we", or "our") operates the
+        TheQuantum.io website and the TheQuantum mobile application (herein
+        after referred to as the "Service"). Our Privacy Policy explains how we
+        collect, use, disclose, and protect information that applies to our
+        Service, and your choices about the collection and use of your
+        information. This policy sets out how TheQuantum collects and uses the
+        information that we collect about you when you use the TheQuantum
+        services. This policy also explains the choices that you can make about
+        the way that we use your information.
+      </p>
+    </div>
+  </section>
+
+  <!-- TERMS AND CONDITIONS -->
+  <section class="terms-n-conditions">
+    <div class="container">
+      <ol class="terms">
+        <li *ngFor="let t of terms; index as i">
+          <h5 class="title">{{ i + 1 }}. {{ t.title }}</h5>
+          <p class="content" [innerHTML]="t.content"></p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- TALK TO US -->
+  <section class="talk-to-us">
+    <app-banner>
+      <ng-container id="heading">
+        Do our values resonate with you?
+      </ng-container>
+      <ng-container id="subHeading">
+        We would love to hear from you.
+      </ng-container>
+      <ng-container id="action">
+        <button class="btn btn-light">Talk To Us</button>
+      </ng-container>
+    </app-banner>
+  </section>
+
+  <!-- FOOTER -->
+  <section class="footer">
+    <app-footer></app-footer>
+  </section>
+</div>

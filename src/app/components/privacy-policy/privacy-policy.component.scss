@@ -1,0 +1,50 @@
+.policy {
+  padding: 12rem 0 6rem;
+  background-color: var(--secondary);
+
+  .heading {
+    font-size: 4.25rem;
+    font-weight: 700;
+    line-height: 4.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .sub-heading {
+    margin-top: 1.6rem;
+    color: var(--muted);
+    font-size: 1.1rem;
+  }
+
+  .message {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+}
+
+.terms-n-conditions {
+  padding: 6rem 0;
+
+  .terms {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 2.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .title {
+      font-size: 1.45rem;
+      font-weight: 600;
+    }
+
+    .content {
+      font-size: 1.4rem;
+      line-height: 2rem;
+    }
+  }
+}

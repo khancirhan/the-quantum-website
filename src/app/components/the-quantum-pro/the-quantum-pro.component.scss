@@ -1,5 +1,5 @@
 .hero {
-  padding: 10rem 0;
+  padding: 11rem 0;
   color: #000;
   background-color: var(--secondary);
 
@@ -49,6 +49,7 @@
   position: -webkit-sticky;
   top: 0;
   background-color: #fff;
+  z-index: 10;
 
   nav {
     padding-top: 1rem;
@@ -68,6 +69,7 @@
 
   .nav-link {
     display: block;
+    cursor: pointer;
 
     span {
       display: block;
@@ -83,6 +85,37 @@
     .text {
       color: rgba(0, 0, 0, 0.85);
       font-weight: 600;
+      transition: all 0.2s ease-out;
+
+      &:hover {
+        color: var(--primary);
+      }
+    }
+
+    &.active .text {
+      color: var(--primary);
     }
   }
+}
+
+.flexible {
+  .recommend {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h6 {
+      font-weight: 400;
+      margin-bottom: 0;
+      line-height: 0;
+    }
+
+    img {
+      width: 100px;
+    }
+  }
+}
+
+.started {
+  text-align: center;
 }

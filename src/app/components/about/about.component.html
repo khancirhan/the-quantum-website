@@ -1,1 +1,144 @@
-<p>about works!</p>
+<div class="main-wrapper">
+  <!-- NAVBAR -->
+  <app-navbar [background]="'white'"></app-navbar>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <div class="container">
+      <div class="flexbox">
+        <div class="flex-50">
+          <div class="wrapper">
+            <h1 class="heading">About</h1>
+            <h5 class="sub-heading">
+              Hi, if you have questions or at any point you’re confused or too
+              annoyed to dig through this page to find the answer you’re looking
+              for, just email us at <br />
+              <a class="email">support@thequantum.io</a>.
+            </h5>
+
+            <h5 class="sub-heading">
+              Here are the universe’s most frequently asked questions:
+            </h5>
+          </div>
+        </div>
+        <div class="flex-50">
+          <div class="about-image-wrapper">
+            <img src="assets/images/about.png" alt="About Us Image" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section class="achievements">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="icon">
+            <img src="assets/images/emaar.png" alt="Images taken" />
+          </div>
+          <h1 class="count">10M+</h1>
+          <h5 class="message">Images Taken</h5>
+        </div>
+        <div class="col-md-3">
+          <div class="icon">
+            <img src="assets/images/emaar.png" alt="Images taken" />
+          </div>
+          <h1 class="count">5000+</h1>
+          <h5 class="message">Projects Documented</h5>
+        </div>
+        <div class="col-md-3">
+          <div class="icon">
+            <img src="assets/images/emaar.png" alt="Images taken" />
+          </div>
+          <h1 class="count">4.9+</h1>
+          <h5 class="message">Customer Service</h5>
+        </div>
+        <div class="col-md-3">
+          <div class="icon">
+            <img src="assets/images/emaar.png" alt="Images taken" />
+          </div>
+          <h1 class="count">1000+</h1>
+          <h5 class="message">Units Shipped</h5>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY THEQUANTUM -->
+  <section class="why-us">
+    <div class="container">
+      <h2 class="heading">Why TheQuantum?</h2>
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="item">Start With Customers</div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="item">Move Uncomfortably Fast</div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="item">Thoughtful Decision Making</div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="item">Team First Attitude</div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="item">Act Like Owners</div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="item">Dream Big</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOCUMENTATION -->
+  <section class="documentation">
+    <div class="container">
+      <h2 class="heading">Few of TheQuantum documentations</h2>
+      <div class="gallery">
+        <div class="w-33">
+          <img
+            class="gallery-image"
+            src="assets/test.png"
+            alt="Gallery Image"
+          />
+        </div>
+        <div class="w-66">
+          <img
+            class="gallery-image"
+            src="assets/test.png"
+            alt="Gallery Image"
+          />
+        </div>
+        <div class="w-33" *ngFor="let i of [1, 2, 3]">
+          <img
+            class="gallery-image"
+            src="assets/test.png"
+            alt="Gallery Image"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TALK TO US -->
+  <section class="talk-to-us">
+    <app-banner>
+      <ng-container id="heading">
+        Do our values resonate with you?
+      </ng-container>
+      <ng-container id="subHeading">
+        We would love to hear from you.
+      </ng-container>
+      <ng-container id="action">
+        <button class="btn btn-light">Talk To Us</button>
+      </ng-container>
+    </app-banner>
+  </section>
+  <!-- FOOTER -->
+  <section class="footer">
+    <app-footer></app-footer>
+  </section>
+</div>

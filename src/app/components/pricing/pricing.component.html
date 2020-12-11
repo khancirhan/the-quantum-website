@@ -1,9 +1,9 @@
 <div class="main-wrapper">
   <!-- NAVBAR -->
-  <app-navbar></app-navbar>
+  <app-navbar [background]="'primary'"></app-navbar>
 
-  <!-- HERO -->
-  <section class="hero"></section>
+  <!-- SHOWCASE -->
+  <app-background-showcase></app-background-showcase>
 
   <!-- PRICING -->
   <section class="pricing">
@@ -22,15 +22,13 @@
             <h1 class="price">US$ 999</h1>
             <h5 class="sub-heading">Includes 1 Year of Cloud Subscription</h5>
 
-            <div class="product-features">
-              <ul class="feature-list">
-                <li class="feature-item">20 Megapixels FHD Images</li>
-                <li class="feature-item">128 GB Flash Storage</li>
-                <li class="feature-item">20 Megapixels FHD Images</li>
-                <li class="feature-item">20 Megapixels FHD Images</li>
-                <li class="feature-item">20 Megapixels FHD Images</li>
-              </ul>
-            </div>
+            <ul class="product-feature-list">
+              <li class="feature-item">20 Megapixels FHD Images</li>
+              <li class="feature-item">128 GB Flash Storage</li>
+              <li class="feature-item">Weighs 1.5 Kgs (~3 lbs)</li>
+              <li class="feature-item">Supports LTE & 4G Bands</li>
+              <li class="feature-item">1 Minute Click Frequency</li>
+            </ul>
 
             <button class="btn btn-muted btn-pricing">Notify</button>
           </div>
@@ -42,24 +40,26 @@
               TheQuantum<span class="postfix-bold">PRO</span>
             </h2>
             <h6 class="info">
-              Light-weight, plug-n-play unit with a blazzing fast onboard
-              controller.
+              4K Images, Military Grade Industrial unit with a blazzing fast
+              onboard controller.
             </h6>
 
-            <h1 class="price">US$ 999</h1>
-            <h5 class="sub-heading">Includes 1 Year of Cloud Subscription</h5>
+            <h1 class="price">US$ 2,499</h1>
+            <h5 class="sub-heading">
+              Includes 1 Year of Cloud Subscription & Free Shipping
+            </h5>
 
-            <div class="product-features">
-              <ul class="feature-list">
-                <li class="feature-item">20 Megapixels FHD Images</li>
-                <li class="feature-item">128 GB Flash Storage</li>
-                <li class="feature-item">20 Megapixels FHD Images</li>
-                <li class="feature-item">20 Megapixels FHD Images</li>
-                <li class="feature-item">20 Megapixels FHD Images</li>
-              </ul>
-            </div>
+            <ul class="product-feature-list">
+              <li class="feature-item">4K Image Quality</li>
+              <li class="feature-item">Expandable Storage</li>
+              <li class="feature-item">Weighs 5 Kgs (~3 lbs)</li>
+              <li class="feature-item">Supports LTE & 4G Bands</li>
+              <li class="feature-item">1 Minute Click Frequency</li>
+            </ul>
 
-            <button class="btn btn-primary btn-pricing">Notify</button>
+            <button class="btn btn-primary btn-pricing">Buy</button>
+
+            <div class="extra">Usually ships the same day</div>
           </div>
         </div>
       </div>
@@ -93,9 +93,9 @@
                 <h5 class="duration">Per Camera / Month</h5>
                 <ul class="features">
                   <li class="feature-item">Real-Time Updates</li>
-                  <li class="feature-item">Real-Time Updates</li>
-                  <li class="feature-item">Real-Time Updates</li>
-                  <li class="feature-item">Real-Time Updates</li>
+                  <li class="feature-item">Remote Restart</li>
+                  <li class="feature-item">IP-67 Pelican Case</li>
+                  <li class="feature-item">Stainless Steel Cover</li>
                 </ul>
 
                 <div class="message">
@@ -119,17 +119,17 @@
           </div>
           <div class="card">
             <div class="card-body">
-              <b>EarthCam:</b> US$ 100 Per Camera / Month
+              <b>PhotoSentinel:</b> US$ 50 Per Camera / Month
             </div>
           </div>
           <div class="card">
             <div class="card-body">
-              <b>EarthCam:</b> US$ 100 Per Camera / Month
+              <b>DeckChair:</b> US$ 249 Per Camera / Month
             </div>
           </div>
           <div class="card">
             <div class="card-body">
-              <b>EarthCam:</b> US$ 100 Per Camera / Month
+              <b>MK TimeLapse:</b> US$ 149 Per Camera / Month
             </div>
           </div>
         </div>

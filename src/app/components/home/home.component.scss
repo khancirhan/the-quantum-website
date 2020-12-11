@@ -1,10 +1,8 @@
 .hero {
   padding: 10rem 0;
   color: #fff;
-  background-image: url("/assets/images/camera.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+  background: url(../../../assets/images/home_circles.svg) -150px -260px/ 90% no-repeat,
+    url(../../../assets/images/camera.jpg) center/cover no-repeat;
 
   .wrapper {
     .heading {
@@ -51,8 +49,16 @@
   .logo-wrapper {
     margin-top: 1.5rem;
     display: flex;
-    flex-wrap: wrap;
+    overflow-x: scroll;
     justify-content: space-between;
+
+    &::-webkit-scrollbar {
+      /* Safari and Chrome */
+      width: 0px;
+      background: transparent;
+    }
+
+    scrollbar-width: none; /* Firefox */
   }
 
   .logo {
@@ -72,4 +78,8 @@
 
 .f2 {
   padding-top: 6rem;
+}
+
+.started {
+  text-align: center;
 }

@@ -1,0 +1,66 @@
+@import "src/assets/scss/form";
+
+.place-order {
+  padding: 9rem 0 6rem;
+  background-color: var(--secondary);
+
+  .card {
+    position: relative;
+    border-radius: 30px;
+    border: 0;
+
+    .card-body {
+      padding: 5rem 8.6rem;
+    }
+  }
+
+  .flex-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .heading {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .sub-heading {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 32px;
+    margin-bottom: 2rem;
+    text-align: right;
+  }
+
+  .email {
+    color: var(--primary);
+    text-decoration: none;
+  }
+
+  .left,
+  .right {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 110px;
+
+    h6 {
+      font-size: 1.2rem;
+    }
+  }
+
+  .left {
+    .btn {
+      padding: 0.4rem 3.5rem;
+    }
+  }
+
+  .right {
+    .logos img {
+      width: 160px;
+      height: auto;
+    }
+  }
+}

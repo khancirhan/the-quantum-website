@@ -1,6 +1,6 @@
 <div class="main-wrapper">
   <!-- NAVBAR -->
-  <app-navbar></app-navbar>
+  <app-navbar [background]="'secondary'"></app-navbar>
 
   <!-- HERO -->
   <section class="hero">
@@ -25,10 +25,10 @@
     <div class="container">
       <nav>
         <ol class="nav-list">
-          <li class="nav-item" *ngFor="let i of [1, 2, 3, 4, 5, 6, 7]">
-            <a href="" class="nav-link">
-              <span class="counter">0{{ i }}</span>
-              <span class="text">The Housing</span>
+          <li class="nav-item" *ngFor="let l of navLinks; index as i">
+            <a (click)="scrollToElement(l.elementId)" class="nav-link">
+              <span class="counter">0{{ i + 1 }}</span>
+              <span class="text">{{ l.text }}</span>
             </a>
           </li>
         </ol>
@@ -37,26 +37,30 @@
   </section>
 
   <!-- HOUSING -->
-  <section class="housing">
+  <section #housingEl id="housing" class="housing">
     <div class="container">
       <div class="flexbox">
         <div class="flex-33">
           <div class="wrapper">
             <app-aside-overview>
-              <ng-container id="title">Configure</ng-container>
-              <ng-container id="heading"> Smart TimeLapse System </ng-container>
+              <ng-container id="title">Housing</ng-container>
+              <ng-container id="heading"
+                >Made Inside IP67 Pelican Case</ng-container
+              >
               <ng-container id="info">
-                With an intuitive interface, thoughtful features and a powerful
-                controller, you can stay focused on managing your projects
-                remotely.
+                TheQuantum is built inside a Military Grade IP67 Pelican Case.
+                This makes it a fit for operating under extreme weather
+                conditions.
               </ng-container>
-              <ng-container id="btnText">Learn More</ng-container>
+              <ng-container id="action">
+                <button class="btn btn-primary">Learn More</button>
+              </ng-container>
             </app-aside-overview>
           </div>
         </div>
         <div class="flex-66">
           <div class="img-wrapper align-right">
-            <img src="assets/test.png" alt="Dashboard Image" />
+            <img src="assets/images/tq.png" alt="Dashboard Image" />
           </div>
         </div>
       </div>
@@ -64,30 +68,32 @@
   </section>
 
   <!-- CONTROLLER -->
-  <section class="controller bg-secondary">
+  <section #controllerEl id="controller" class="controller bg-secondary">
     <div class="container">
       <div class="flexbox row-reverse">
         <div class="flex-33">
           <div class="wrapper">
             <app-aside-overview>
-              <ng-container id="title">The Beast</ng-container>
+              <ng-container id="title">Controller</ng-container>
               <ng-container id="heading">
-                Trusted by Top Developers
+                Smart TimeLapse Controller
               </ng-container>
               <ng-container id="info"
-                >We enable our customers to capture and broadcast everything
-                from city skylines and construction sites to cruise ships.
+                >Built on a dynamic platform, the TQ Controller puts creative
+                control and flexibility back into your hands.
               </ng-container>
-              <ng-container id="btnText">Learn More</ng-container>
+              <ng-container id="action">
+                <button class="btn btn-primary">Learn More</button>
+              </ng-container>
             </app-aside-overview>
           </div>
         </div>
         <div class="flex-66">
           <div class="img-wrapper">
             <img
-              class="img"
-              src="assets/images/camera.jpg"
-              alt="Camera Image"
+              class="radius"
+              src="assets/images/ctrl.png"
+              alt="Controller Image"
             />
           </div>
         </div>
@@ -96,26 +102,31 @@
   </section>
 
   <!-- ADAPTIVE -->
-  <section class="adaptive">
+  <section #adaptiveEl id="adaptive" class="adaptive">
     <div class="container">
       <div class="flexbox">
         <div class="flex-33">
           <div class="wrapper">
             <app-aside-overview>
-              <ng-container id="title">Configure</ng-container>
-              <ng-container id="heading"> Smart TimeLapse System </ng-container>
+              <ng-container id="title">Adaptive</ng-container>
+              <ng-container id="heading"
+                >Power & Network Switching</ng-container
+              >
               <ng-container id="info">
-                With an intuitive interface, thoughtful features and a powerful
-                controller, you can stay focused on managing your projects
-                remotely.
+                Every unit is powered by an Industrial Grade Lithium Ion
+                Battery. The unit can run on Mobile LTE networks or fixed line
+                internet. To charge, hook it up to a wall mount or a solar
+                panel.
               </ng-container>
-              <ng-container id="btnText">Learn More</ng-container>
+              <ng-container id="action">
+                <button class="btn btn-primary">Learn More</button>
+              </ng-container>
             </app-aside-overview>
           </div>
         </div>
         <div class="flex-66">
           <div class="img-wrapper align-right">
-            <img src="assets/test.png" alt="Dashboard Image" />
+            <img src="assets/images/tq.png" alt="Dashboard Image" />
           </div>
         </div>
       </div>
@@ -123,29 +134,29 @@
   </section>
 
   <!-- FLEXIBILITY -->
-  <section class="flexibility bg-secondary">
+  <section #flexibilityEl id="flexibility" class="flexibility bg-secondary">
     <div class="container">
       <div class="flexbox row-reverse">
         <div class="flex-33">
           <div class="wrapper">
             <app-aside-overview>
-              <ng-container id="title">The Beast</ng-container>
-              <ng-container id="heading">
-                Trusted by Top Developers
-              </ng-container>
+              <ng-container id="title">Flexibility</ng-container>
+              <ng-container id="heading">Control from Comfort</ng-container>
               <ng-container id="info"
-                >We enable our customers to capture and broadcast everything
-                from city skylines and construction sites to cruise ships.
+                >Built on a dynamic platform, the TQ Controller puts creative
+                control and flexibility back into your hands.
               </ng-container>
-              <ng-container id="btnText">Learn More</ng-container>
+              <ng-container id="action">
+                <button class="btn btn-primary">Learn More</button>
+              </ng-container>
             </app-aside-overview>
           </div>
         </div>
         <div class="flex-66">
           <div class="img-wrapper">
             <img
-              class="img"
-              src="assets/images/camera.jpg"
+              class="radius"
+              src="assets/images/dashboard.svg"
               alt="Camera Image"
             />
           </div>
@@ -155,20 +166,28 @@
   </section>
 
   <!-- FLEXIBLE -->
-  <section class="flexible">
+  <section #flexibleEl id="flexible" class="flexible">
     <div class="container">
       <div class="flexbox">
         <div class="flex-33">
           <div class="wrapper">
             <app-aside-overview>
-              <ng-container id="title">Configure</ng-container>
-              <ng-container id="heading"> Smart TimeLapse System </ng-container>
+              <ng-container id="title">Flexible</ng-container>
+              <ng-container id="heading"
+                >Supports All DSLR Cameras*</ng-container
+              >
               <ng-container id="info">
-                With an intuitive interface, thoughtful features and a powerful
-                controller, you can stay focused on managing your projects
-                remotely.
+                Every unit is powered by an Industrial Grade Lithium Ion
+                Battery. The unit can run on Mobile LTE networks or fixed line
+                internet.
               </ng-container>
-              <ng-container id="btnText">Learn More</ng-container>
+              <ng-container id="action">
+                <div class="recommend">
+                  <h6>We Recommend</h6>
+                  <img src="assets/images/emaar.png" alt="Nikon Image" />
+                  <img src="assets/images/ibm.png" alt="Canon Image" />
+                </div>
+              </ng-container>
             </app-aside-overview>
           </div>
         </div>
@@ -182,21 +201,23 @@
   </section>
 
   <!-- SUPPORT -->
-  <section class="support bg-secondary">
+  <section #supportEl id="support" class="support bg-secondary">
     <div class="container">
       <div class="flexbox row-reverse">
         <div class="flex-33">
           <div class="wrapper">
             <app-aside-overview>
-              <ng-container id="title">The Beast</ng-container>
+              <ng-container id="title">Support</ng-container>
               <ng-container id="heading">
-                Trusted by Top Developers
+                Heroic Replacement Warranty
               </ng-container>
               <ng-container id="info"
-                >We enable our customers to capture and broadcast everything
-                from city skylines and construction sites to cruise ships.
+                >Built on a dynamic platform, the TQ Controller puts creative
+                control and flexibility back into your hands.
               </ng-container>
-              <ng-container id="btnText">Learn More</ng-container>
+              <ng-container id="action">
+                <button class="btn btn-primary">Learn More</button>
+              </ng-container>
             </app-aside-overview>
           </div>
         </div>
@@ -210,7 +231,7 @@
   </section>
 
   <!-- GET STARTED -->
-  <section class="started">
+  <section #startedEl id="started" class="started">
     <app-banner>
       <ng-container id="heading">
         Get started with TheQuantum today
@@ -218,7 +239,9 @@
       <ng-container id="subHeading">
         Monitor your construction sites from anywhere, anytime.
       </ng-container>
-      <ng-container id="btnText"> Learn More </ng-container>
+      <ng-container id="action">
+        <button class="btn btn-light">Learn More</button>
+      </ng-container>
     </app-banner>
   </section>
 

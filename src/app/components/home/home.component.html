@@ -1,6 +1,6 @@
 <div class="main-wrapper">
   <!-- NAVBAR -->
-  <app-navbar></app-navbar>
+  <app-navbar [background]="'transparent'"></app-navbar>
 
   <!-- HERO -->
   <section class="hero">
@@ -15,8 +15,10 @@
               largest companies.
             </h5>
             <div class="buttons">
-              <button class="btn btn-primary">Buy Now</button>
-              <button class="btn btn-outline-light">See pricing</button>
+              <a class="btn btn-primary" routerLink="/">Buy Now</a>
+              <a class="btn btn-outline-light" routerLink="/pricing"
+                >See pricing</a
+              >
             </div>
             <div class="extra">
               Our systems are built extra-tough for the any jobsite.
@@ -40,6 +42,12 @@
         <img class="logo" src="assets/images/ibm.png" alt="" />
         <img class="logo" src="assets/images/emaar.png" alt="" />
         <img class="logo" src="assets/images/ibm.png" alt="" />
+        <!--  -->
+        <img class="logo" src="assets/images/ibm.png" alt="" />
+        <img class="logo" src="assets/images/ibm.png" alt="" />
+        <img class="logo" src="assets/images/ibm.png" alt="" />
+        <img class="logo" src="assets/images/ibm.png" alt="" />
+        <img class="logo" src="assets/images/ibm.png" alt="" />
       </div>
     </div>
   </section>
@@ -58,13 +66,19 @@
                 controller, you can stay focused on managing your projects
                 remotely.
               </ng-container>
-              <ng-container id="btnText">Learn More</ng-container>
+              <ng-container id="action">
+                <button class="btn btn-primary">Learn More</button>
+              </ng-container>
             </app-aside-overview>
           </div>
         </div>
         <div class="flex-66">
           <div class="img-wrapper align-right">
-            <img src="assets/test.png" alt="Dashboard Image" />
+            <img
+              class="radius"
+              src="assets/images/dashboard.svg"
+              alt="Dashboard Image"
+            />
           </div>
         </div>
       </div>
@@ -75,47 +89,15 @@
   <section class="features f1">
     <div class="container">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4" *ngFor="let f of featureSet1">
           <div class="wrapper">
             <app-feature>
               <ng-container id="icon">
-                <img src="assets/images/icon1.png" alt="Remote Control Icon" />
+                <img [src]="f.icon" [alt]="f.title" />
               </ng-container>
-              <ng-container id="title">Remote Control</ng-container>
+              <ng-container id="title">{{ f.title }}</ng-container>
               <ng-container id="info">
-                Manage your click, upload, image quality settings and more from
-                anywhere, anytime. The Remote Control allows you to remotely
-                control the units regime.
-              </ng-container>
-            </app-feature>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="wrapper">
-            <app-feature>
-              <ng-container id="icon">
-                <img src="assets/images/icon1.png" alt="Solar or Mains Icon" />
-              </ng-container>
-              <ng-container id="title">Solar or Mains</ng-container>
-              <ng-container id="info">
-                No separate accessories! Each of our unit can be powered by
-                Solar or Mains. To cover the black-outs or rainy days, the unit
-                is powered by an on-board battery pack.
-              </ng-container>
-            </app-feature>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="wrapper">
-            <app-feature>
-              <ng-container id="icon">
-                <img src="assets/images/icon1.png" alt="SmartLapse™ Icon" />
-              </ng-container>
-              <ng-container id="title">SmartLapse™ </ng-container>
-              <ng-container id="info">
-                First in segment, break your entire regime as you prefer. Add as
-                many as 10 configs to a single day shooting regime with
-                different click and upload timings.
+                {{ f.info }}
               </ng-container>
             </app-feature>
           </div>
@@ -139,17 +121,15 @@
                 >We enable our customers to capture and broadcast everything
                 from city skylines and construction sites to cruise ships.
               </ng-container>
-              <ng-container id="btnText">Learn More</ng-container>
+              <ng-container id="action">
+                <button class="btn btn-primary">Learn More</button>
+              </ng-container>
             </app-aside-overview>
           </div>
         </div>
         <div class="flex-66">
           <div class="img-wrapper">
-            <img
-              class="img"
-              src="assets/images/camera.jpg"
-              alt="Camera Image"
-            />
+            <img class="img" src="assets/images/tq.png" alt="Camera Image" />
           </div>
         </div>
       </div>
@@ -160,51 +140,15 @@
   <section class="features f2">
     <div class="container">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4" *ngFor="let f of featureSet2">
           <div class="wrapper">
             <app-feature>
               <ng-container id="icon">
-                <img
-                  src="assets/images/icon1.png"
-                  alt="LTE Connectivity Icon"
-                />
+                <img [src]="f.icon" [alt]="f.title" />
               </ng-container>
-              <ng-container id="title">LTE Connectivity</ng-container>
+              <ng-container id="title">{{ f.title }}</ng-container>
               <ng-container id="info">
-                For the remotest construction sites with no fixed line internet,
-                the unit is capable of running on a wide-band of Mobile LTE
-                networks. Even when the network drops, the unit is still
-                operational.
-              </ng-container>
-            </app-feature>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="wrapper">
-            <app-feature>
-              <ng-container id="icon">
-                <img src="assets/images/icon1.png" alt="Cloud Reporting Icon" />
-              </ng-container>
-              <ng-container id="title">Cloud Reporting</ng-container>
-              <ng-container id="info">
-                Sitting miles away from your contruction site? Get access to the
-                unit logs, battery health, signal strength and much more from
-                the click of a single button.
-              </ng-container>
-            </app-feature>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="wrapper">
-            <app-feature>
-              <ng-container id="icon">
-                <img src="assets/images/icon1.png" alt="Customised Icon" />
-              </ng-container>
-              <ng-container id="title">Customised</ng-container>
-              <ng-container id="info">
-                Don’t see what you have always wanted? We strive for continous
-                client and user satisfaction. Get in touch with us if you want a
-                customised solution designed around TheQuantum.
+                {{ f.info }}
               </ng-container>
             </app-feature>
           </div>
@@ -227,13 +171,19 @@
                 controller, you can stay focused on managing your projects
                 remotely.
               </ng-container>
-              <ng-container id="btnText">Learn More</ng-container>
+              <ng-container id="action">
+                <button class="btn btn-primary">Learn More</button>
+              </ng-container>
             </app-aside-overview>
           </div>
         </div>
         <div class="flex-66">
           <div class="img-wrapper align-right">
-            <img src="assets/images/camera.jpg" alt="" class="video" />
+            <img
+              class="video radius"
+              src="assets/images/works.png"
+              alt="Video"
+            />
           </div>
         </div>
       </div>
@@ -249,7 +199,9 @@
       <ng-container id="subHeading">
         Monitor your construction sites from anywhere, anytime.
       </ng-container>
-      <ng-container id="btnText"> Learn More </ng-container>
+      <ng-container id="action">
+        <button class="btn btn-light">Learn More</button>
+      </ng-container>
     </app-banner>
   </section>
 

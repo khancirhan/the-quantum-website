@@ -1,0 +1,24 @@
+.icon {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+  height: 80px;
+  width: auto;
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.info {
+  font-size: 0.95rem;
+  line-height: 1.4rem;
+  color: rgba(0, 0, 0, 0.65);
+}
