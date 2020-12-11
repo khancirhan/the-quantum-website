@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent implements OnInit {
-  private url = environment.url;
+  private url = window.location.origin;
 
   constructor() {}
 
