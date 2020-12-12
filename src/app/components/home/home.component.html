@@ -129,7 +129,21 @@
         </div>
         <div class="flex-66">
           <div class="img-wrapper">
-            <img class="img" src="assets/images/tq.png" alt="Camera Image" />
+            <video
+              loop
+              autoplay
+              muted
+              #video
+              (mouseover)="pauseVideo(video)"
+              (mouseleave)="resumeVideo(video)"
+            >
+              <source
+                src="https://timelapseme.com/video/quantum.mp4"
+                type="video/mp4"
+                autoplay
+              />
+              Your browser does not support the video.
+            </video>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,8 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
-
   featureSet1 = [
     {
       icon: 'assets/images/remote_control.svg',
@@ -49,6 +47,17 @@ export class HomeComponent implements OnInit {
         'Don’t see what you have always wanted? We strive for continous client and user satisfaction. Get in touch with us if you want acustomised solution designed around TheQuantum.',
     },
   ];
+
+  constructor() {}
+
+  pauseVideo(video: HTMLVideoElement): void {
+    if (!video.paused) video.pause();
+  }
+
+  resumeVideo(video: HTMLVideoElement): void {
+    video.muted = true;
+    if (video.paused) video.play();
+  }
 
   ngOnInit(): void {}
 }
