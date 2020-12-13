@@ -48,15 +48,22 @@ export class HomeComponent implements OnInit {
     },
   ];
 
+  private isVideoPlaying = true;
+
   constructor() {}
 
   pauseVideo(video: HTMLVideoElement): void {
-    if (!video.paused) video.pause();
+    if (!video.paused && this.isVideoPlaying) {
+      video.pause();
+      this.isVideoPlaying = false;
+    }
   }
 
   resumeVideo(video: HTMLVideoElement): void {
-    video.muted = true;
-    if (video.paused) video.play();
+    if (video.paused && !this.isVideoPlaying) {
+      video.play();
+      this.isVideoPlaying = true;
+    }
   }
 
   ngOnInit(): void {}

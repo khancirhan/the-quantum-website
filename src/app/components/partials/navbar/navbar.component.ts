@@ -6,6 +6,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
+  @Input('background') background = 'transparent';
+
   classes: { [key: string]: string } = {
     transparent: 'bg-transparent',
     primary: 'bg-primary',
@@ -13,9 +15,13 @@ export class NavbarComponent implements OnInit {
     white: 'bg-white',
   };
 
-  @Input('background') background = 'transparent';
+  navbarLogo = 'assets/images/logo_dark.svg';
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if (this.background == 'secondary' || this.background == 'white')
+      this.navbarLogo = 'assets/images/logo_light.svg';
+    else this.navbarLogo = 'assets/images/logo_dark.svg';
+  }
 }
