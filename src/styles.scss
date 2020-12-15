@@ -57,14 +57,19 @@ $muted: rgba(0, 0, 0, 0.45);
   justify-content: space-between;
   align-items: center;
   padding: 6rem 0;
-  gap: 4rem;
 
   &.row-reverse {
     flex-direction: row-reverse;
+
+    .flex-33 {
+      margin-left: 4rem;
+      margin-right: 0 !important;
+    }
   }
 
   .flex-33 {
     width: 33.333%;
+    margin-right: 4rem;
   }
 
   .flex-66 {
@@ -85,6 +90,10 @@ $muted: rgba(0, 0, 0, 0.45);
     width: 100%;
     height: auto;
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  video {
+    object-fit: cover;
   }
 
   .radius {

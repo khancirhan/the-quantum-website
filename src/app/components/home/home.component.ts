@@ -1,11 +1,19 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterViewInit {
+  @ViewChild('video') video: ElementRef;
+
   featureSet1 = [
     {
       icon: 'assets/images/remote_control.svg',
@@ -48,21 +56,25 @@ export class HomeComponent implements OnInit {
     },
   ];
 
-  private isVideoPlaying = true;
-
   constructor() {}
 
+  ngAfterViewInit(): void {
+    if (this.video.nativeElement.paused) {
+      this.video.nativeElement.muted = true;
+      this.video.nativeElement.play();
+    }
+  }
+
   pauseVideo(video: HTMLVideoElement): void {
-    if (!video.paused && this.isVideoPlaying) {
+    if (!video.paused) {
       video.pause();
-      this.isVideoPlaying = false;
     }
   }
 
   resumeVideo(video: HTMLVideoElement): void {
-    if (video.paused && !this.isVideoPlaying) {
+    if (video.paused) {
+      video.muted = true;
       video.play();
-      this.isVideoPlaying = true;
     }
   }
 
