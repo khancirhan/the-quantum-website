@@ -21,12 +21,16 @@
   </section>
 
   <!-- NAVIGATION -->
-  <section class="navigation">
+  <section #nav class="navigation">
     <div class="container">
       <nav>
         <ol class="nav-list">
           <li class="nav-item" *ngFor="let l of navLinks; index as i">
-            <a (click)="scrollToElement(l.elementId)" class="nav-link">
+            <a
+              (click)="scrollToElement(l.elementId)"
+              [class.active]="currentActive == i + 1"
+              class="nav-link"
+            >
               <span class="counter">0{{ i + 1 }}</span>
               <span class="text">{{ l.text }}</span>
             </a>

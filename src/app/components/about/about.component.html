@@ -13,7 +13,9 @@
               Hi, if you have questions or at any point you’re confused or too
               annoyed to dig through this page to find the answer you’re looking
               for, just email us at <br />
-              <a class="email">support@thequantum.io</a>.
+              <a href="mailto:support@thequantum.io" class="email"
+                >support@thequantum.io</a
+              >.
             </h5>
 
             <h5 class="sub-heading">
@@ -98,26 +100,22 @@
     <div class="container">
       <h2 class="heading">Few of TheQuantum documentations</h2>
       <div class="gallery">
-        <div class="w-33">
-          <img
-            class="gallery-image"
-            src="assets/test.png"
-            alt="Gallery Image"
-          />
-        </div>
-        <div class="w-66">
-          <img
-            class="gallery-image"
-            src="assets/test.png"
-            alt="Gallery Image"
-          />
-        </div>
-        <div class="w-33" *ngFor="let i of [1, 2, 3]">
-          <img
-            class="gallery-image"
-            src="assets/test.png"
-            alt="Gallery Image"
-          />
+        <div class="row gx-3">
+          <div class="col-md-4 img-col">
+            <img class="gallery-img" src="assets/test.png" alt="" />
+          </div>
+          <div class="col-md-8 img-col">
+            <img class="gallery-img" src="assets/test.png" alt="" />
+          </div>
+          <div class="col-md-4 img-col">
+            <img class="gallery-img" src="assets/test.png" alt="" />
+          </div>
+          <div class="col-md-4 img-col">
+            <img class="gallery-img" src="assets/test.png" alt="" />
+          </div>
+          <div class="col-md-4 img-col">
+            <img class="gallery-img" src="assets/test.png" alt="" />
+          </div>
         </div>
       </div>
     </div>

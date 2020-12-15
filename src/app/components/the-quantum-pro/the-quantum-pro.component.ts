@@ -3,17 +3,17 @@ import {
   Component,
   ElementRef,
   HostListener,
-  OnInit,
   ViewChild,
 } from '@angular/core';
-import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-the-quantum-pro',
   templateUrl: './the-quantum-pro.component.html',
   styleUrls: ['./the-quantum-pro.component.scss'],
 })
-export class TheQuantumProComponent implements AfterViewInit {
+export class TheQuantumProComponent {
+  @ViewChild('nav') navEl: ElementRef;
+
   @ViewChild('housingEl') housingEl: ElementRef;
   @ViewChild('controllerEl') controllerEl: ElementRef;
   @ViewChild('adaptiveEl') adaptiveEl: ElementRef;
@@ -23,13 +23,13 @@ export class TheQuantumProComponent implements AfterViewInit {
   @ViewChild('startedEl') startedEl: ElementRef;
 
   currentActive = 0;
-  housingOffset: number;
-  controllerOffset: number;
-  adaptiveOffset: number;
-  flexibilityOffset: number;
-  flexibleOffset: number;
-  supportOffset: number;
-  startedOffset: number;
+  housingTop: number;
+  controllerTop: number;
+  adaptiveTop: number;
+  flexibilityTop: number;
+  flexibleTop: number;
+  supportTop: number;
+  startedTop: number;
 
   navLinks = [
     {
@@ -62,57 +62,57 @@ export class TheQuantumProComponent implements AfterViewInit {
     },
   ];
 
-  constructor(private viewportScroller: ViewportScroller) {}
-
-  ngAfterViewInit(): void {
-    this.housingOffset = this.housingEl.nativeElement.offsetTop;
-    this.controllerOffset = this.controllerEl.nativeElement.offsetTop;
-    this.adaptiveOffset = this.adaptiveEl.nativeElement.offsetTop;
-    this.flexibilityOffset = this.flexibilityEl.nativeElement.offsetTop;
-    this.flexibleOffset = this.flexibleEl.nativeElement.offsetTop;
-    this.supportOffset = this.supportEl.nativeElement.offsetTop;
-    this.startedOffset = this.startedEl.nativeElement.offsetTop;
-  }
+  constructor() {}
 
   scrollToElement(elementId: string): void {
-    this.viewportScroller.scrollToAnchor(elementId);
+    const el = document.getElementById(elementId);
+
+    window.scrollTo({
+      top: el!.offsetTop - this.navEl.nativeElement.offsetHeight,
+    });
   }
 
   @HostListener('window:scroll', ['$event'])
   checkOffsetTop() {
-    const pageYOffset = window.pageYOffset;
+    const pageYOffset =
+      window.pageYOffset + this.navEl.nativeElement.offsetHeight + 4; // + 4 because of the last element not having enough height on lg view
 
-    if (
-      pageYOffset >= this.housingOffset &&
-      pageYOffset < this.controllerOffset
-    ) {
+    this.housingTop = this.housingEl.nativeElement.offsetTop;
+    this.controllerTop = this.controllerEl.nativeElement.offsetTop;
+    this.adaptiveTop = this.adaptiveEl.nativeElement.offsetTop;
+    this.flexibilityTop = this.flexibilityEl.nativeElement.offsetTop;
+    this.flexibleTop = this.flexibleEl.nativeElement.offsetTop;
+    this.supportTop = this.supportEl.nativeElement.offsetTop;
+    this.startedTop = this.startedEl.nativeElement.offsetTop;
+
+    if (pageYOffset >= this.housingTop && pageYOffset < this.controllerTop) {
       this.currentActive = 1;
     } else if (
-      pageYOffset >= this.controllerOffset &&
-      pageYOffset < this.adaptiveOffset
+      pageYOffset >= this.controllerTop &&
+      pageYOffset < this.adaptiveTop
     ) {
       this.currentActive = 2;
     } else if (
-      pageYOffset >= this.adaptiveOffset &&
-      pageYOffset < this.flexibilityOffset
+      pageYOffset >= this.adaptiveTop &&
+      pageYOffset < this.flexibilityTop
     ) {
       this.currentActive = 3;
     } else if (
-      pageYOffset >= this.flexibilityOffset &&
-      pageYOffset < this.flexibleOffset
+      pageYOffset >= this.flexibilityTop &&
+      pageYOffset < this.flexibleTop
     ) {
       this.currentActive = 4;
     } else if (
-      pageYOffset >= this.flexibleOffset &&
-      pageYOffset < this.supportOffset
+      pageYOffset >= this.flexibleTop &&
+      pageYOffset < this.supportTop
     ) {
       this.currentActive = 5;
     } else if (
-      pageYOffset >= this.supportOffset &&
-      pageYOffset < this.startedOffset
+      pageYOffset >= this.supportTop &&
+      pageYOffset < this.startedTop
     ) {
       this.currentActive = 6;
-    } else if (pageYOffset >= this.startedOffset) {
+    } else if (pageYOffset >= this.startedTop) {
       this.currentActive = 7;
     } else {
       this.currentActive = 0;

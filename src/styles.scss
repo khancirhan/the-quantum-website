@@ -17,7 +17,7 @@ $muted: rgba(0, 0, 0, 0.45);
 }
 
 .container {
-  max-width: 1170px !important;
+  max-width: 1150px !important;
 }
 
 .btn {
@@ -57,6 +57,7 @@ $muted: rgba(0, 0, 0, 0.45);
   justify-content: space-between;
   align-items: center;
   padding: 6rem 0;
+  gap: 4rem;
 
   &.row-reverse {
     flex-direction: row-reverse;
@@ -81,7 +82,7 @@ $muted: rgba(0, 0, 0, 0.45);
 
   img,
   video {
-    width: 90%;
+    width: 100%;
     height: auto;
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
   }

@@ -22,6 +22,8 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     if (this.background == 'secondary' || this.background == 'white')
       this.navbarLogo = 'assets/images/logo_light.svg';
+    else if (this.background == 'primary')
+      this.navbarLogo = 'assets/images/logo_primary.svg';
     else this.navbarLogo = 'assets/images/logo_dark.svg';
   }
 }
