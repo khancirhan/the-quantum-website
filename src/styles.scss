@@ -18,6 +18,7 @@ $muted: rgba(0, 0, 0, 0.45);
 
 .container {
   max-width: 1150px !important;
+  padding: 0 1.25rem;
 }
 
 .btn {
@@ -112,4 +113,10 @@ $muted: rgba(0, 0, 0, 0.45);
 
 .postfix-bold {
   font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px !important;
+  }
 }
