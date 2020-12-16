@@ -21,3 +21,23 @@
 .action {
   margin-top: 2.5rem;
 }
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 0.8rem;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .info {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+  }
+
+  .action {
+    margin-top: 2.5rem;
+  }
+}

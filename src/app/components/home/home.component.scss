@@ -65,6 +65,7 @@
 
   .logo {
     display: block;
+    height: 64px;
   }
 }
 
@@ -84,4 +85,52 @@
 
 .started {
   text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 7rem 0 6rem;
+
+    .wrapper {
+      padding-right: 0;
+
+      .heading {
+        font-size: 2.5rem;
+        line-height: 2.8rem;
+      }
+
+      .sub-heading {
+        margin-top: 1.2rem;
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+      }
+    }
+  }
+
+  .clients {
+    padding-top: 4rem;
+
+    .heading {
+      font-size: 0.85rem;
+    }
+
+    .logo {
+      height: 48px;
+    }
+  }
+
+  .features {
+    .wrapper {
+      margin-right: 0;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .f1 {
+    padding-bottom: 3rem;
+  }
+
+  .f2 {
+    padding-top: 3rem;
+  }
 }
