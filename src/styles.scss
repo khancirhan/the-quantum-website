@@ -1,6 +1,4 @@
-$primary: #ee741f;
-$secondary: #f8f8fb;
-$muted: rgba(0, 0, 0, 0.45);
+@import "src/assets/scss/variables";
 
 :root {
   --primary: #{$primary};
@@ -18,7 +16,7 @@ $muted: rgba(0, 0, 0, 0.45);
 
 .container {
   max-width: 1150px !important;
-  padding: 0 1.25rem;
+  padding: 0 2rem;
 }
 
 .btn {
@@ -118,5 +116,9 @@ $muted: rgba(0, 0, 0, 0.45);
 @media screen and (max-width: 768px) {
   body {
     font-size: 14px !important;
+  }
+
+  .container {
+    padding: 0 1rem;
   }
 }

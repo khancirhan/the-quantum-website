@@ -1,3 +1,5 @@
+@import "src/assets/scss/variables";
+
 .main-wrapper {
   background-color: var(--secondary);
 }
@@ -48,6 +50,7 @@
     padding: 0;
 
     .feature-item {
+      display: inline-flex;
       margin-bottom: 2rem;
       font-size: 1.1rem;
       font-weight: 300;
@@ -150,10 +153,16 @@
       margin: 1.2rem 0;
       margin-left: 1.7rem;
 
+      .price-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
       .actual-price {
         font-size: 3.2rem;
         font-weight: 700;
-        margin-right: 1rem;
+        margin-right: 0.5rem;
       }
 
       .discount {
@@ -200,9 +209,141 @@
       border-radius: 8px;
 
       .card-body {
-        padding: 1.2rem 0;
+        padding: 1.2rem 1.3rem;
         padding-left: 3.5rem;
         font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pricing {
+    padding: 8rem 0 4rem;
+
+    .col-md-6:first-child {
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      border-radius: $card-md-border-radius;
+
+      .card-body {
+        padding: 3rem 2rem;
+      }
+    }
+
+    .product {
+      font-size: 1.7rem;
+    }
+
+    .info {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .price {
+      margin-top: 1.8rem;
+      font-size: 2.6rem;
+    }
+
+    .sub-heading {
+      font-size: 1rem;
+    }
+
+    .product-feature-list {
+      margin-top: 2.8rem;
+      margin-bottom: 1.8rem;
+
+      .feature-item {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .extra {
+      margin-bottom: -1rem;
+    }
+  }
+
+  .save-big {
+    .heading {
+      font-size: 1.7rem;
+    }
+
+    .sub-heading {
+      margin-top: 0.6rem;
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  .comparison {
+    padding: 3rem 0 4rem;
+
+    .flex-wrapper {
+      flex-direction: column;
+    }
+
+    .left,
+    .right {
+      width: 100%;
+    }
+
+    .vs-wrapper {
+      .vs-logo {
+        margin-top: -1rem;
+        margin-bottom: -1rem;
+        width: 80px;
+        height: 80px;
+        font-size: 1.7rem;
+      }
+    }
+
+    .left {
+      .card {
+        .card-body {
+          padding: 1.5rem;
+        }
+      }
+
+      .logo {
+        img {
+          width: 120px;
+        }
+      }
+
+      .content {
+        margin: 1rem 0;
+        margin-left: 1.5rem;
+
+        .actual-price {
+          font-size: 2.2rem;
+        }
+
+        .discount {
+          font-size: 0.8rem;
+        }
+
+        .duration {
+          font-size: 1.05rem;
+        }
+
+        .message {
+          margin-top: 1.5rem;
+          font-size: 0.7rem;
+        }
+      }
+    }
+
+    .right {
+      .card {
+        margin-bottom: 1rem;
+
+        .card-body {
+          padding: 1.2rem 1.3rem;
+          font-size: 0.9rem;
+        }
       }
     }
   }

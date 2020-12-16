@@ -1,3 +1,5 @@
+@import "src/assets/scss/variables";
+
 .order-confirmed {
   padding: 9rem 0 6rem;
   background-color: var(--secondary);
@@ -10,7 +12,7 @@
     .card-body {
       padding: 5rem 3rem 6rem;
       width: 100%;
-      max-width: 820px;
+      max-width: $max-card-width;
       margin: auto;
     }
   }
@@ -44,5 +46,45 @@
 
   .order-id {
     font-weight: 600 !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .order-confirmed {
+    padding: 8rem 0 4rem;
+
+    .card {
+      border-radius: $card-md-border-radius;
+
+      .card-body {
+        padding: $card-md-pad-y $card-md-pad-x;
+        text-align: center;
+      }
+    }
+
+    .confirmed-img {
+      height: 150px;
+      width: 150px;
+    }
+
+    .heading {
+      font-size: 1.7rem;
+    }
+
+    .sub-heading {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .order-confirmed {
+    .card {
+      .card-body {
+        padding: $card-sm-pad-y $card-sm-pad-x;
+      }
+    }
   }
 }
