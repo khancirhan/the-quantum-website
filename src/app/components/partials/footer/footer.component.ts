@@ -11,17 +11,17 @@ export class FooterComponent implements OnInit {
 
   constructor() {}
 
-  footerLinks = [
+  footerLinks: any[] = [
     {
       title: 'Product',
       links: [
         {
           text: 'TheQuantum Air',
-          href: this.url,
+          path: '/the-quantum-pro',
         },
         {
           text: 'TheQuantum Pro',
-          href: this.url + '/the-quantum-pro',
+          path: '/the-quantum-pro',
         },
       ],
     },
@@ -43,11 +43,11 @@ export class FooterComponent implements OnInit {
       links: [
         {
           text: 'F.A.Q.',
-          href: this.url + '/faqs',
+          path: '/faqs',
         },
         {
           text: 'Get Help',
-          href: this.url + '/get-help',
+          path: '/get-help',
         },
       ],
     },
@@ -56,11 +56,11 @@ export class FooterComponent implements OnInit {
       links: [
         {
           text: 'About Us',
-          href: this.url + '/about-us',
+          path: '/about-us',
         },
         {
           text: 'Press',
-          href: this.url + '',
+          path: '',
         },
       ],
     },
@@ -82,11 +82,13 @@ export class FooterComponent implements OnInit {
       links: [
         {
           text: 'Privacy Policy',
-          href: this.url + '/privacy-policy#policy',
+          path: '/privacy-policy',
+          fragment: 'policy',
         },
         {
           text: 'Terms & Conditions',
-          href: this.url + '/privacy-policy#terms-and-conditions',
+          path: '/privacy-policy',
+          fragment: 'terms-and-conditions',
         },
       ],
     },

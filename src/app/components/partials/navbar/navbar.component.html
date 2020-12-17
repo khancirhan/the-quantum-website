@@ -1,20 +1,35 @@
 <nav [class]="'navbar navbar-expand-lg ' + classes[background]">
   <div class="container">
-    <a class="navbar-brand" routerLink="/">
-      <img [src]="navbarLogo" alt="TheQuantum Logo" />
-    </a>
     <button
       class="navbar-toggler"
+      (click)="isOpen = !isOpen"
+      [ngClass]="{
+        collapsed: !isOpen,
+        open: isOpen
+      }"
       type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
     >
-      <span class="navbar-toggler-icon"></span>
+      <div class="toggler-icon">
+        <div class="bar1 bar-top"></div>
+        <div class="bar2 bar-bottom"></div>
+      </div>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <a class="navbar-icon" routerLink="/">
+      <img
+        class="logo-lg d-none d-lg-block"
+        [src]="navbarLogo"
+        alt="TheQuantum Logo"
+      />
+      <img
+        class="logo-sm d-sm-block d-lg-none"
+        src="assets/images/timelapse.svg"
+        alt="TheQuantum Logo"
+      />
+    </a>
+
+    <a class="link-primary d-sm-block d-lg-none">Sign In</a>
+
+    <div class="collapse navbar-collapse" [class.show]="isOpen">
       <ul class="navbar-nav nav-menu">
         <li class="nav-item">
           <a
@@ -47,7 +62,7 @@
         </li>
       </ul>
       <ul class="navbar-nav nav-buttons">
-        <li class="nav-item">
+        <li class="nav-item d-none d-lg-block">
           <a class="btn btn-signin">Sign In</a>
         </li>
         <li class="nav-item">

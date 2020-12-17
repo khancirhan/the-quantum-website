@@ -1,10 +1,4 @@
-import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  HostListener,
-  ViewChild,
-} from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-the-quantum-pro',
@@ -69,13 +63,14 @@ export class TheQuantumProComponent {
 
     window.scrollTo({
       top: el!.offsetTop - this.navEl.nativeElement.offsetHeight,
+      behavior: 'smooth',
     });
   }
 
   @HostListener('window:scroll', ['$event'])
   checkOffsetTop() {
     const pageYOffset =
-      window.pageYOffset + this.navEl.nativeElement.offsetHeight + 4; // + 4 because of the last element not having enough height on lg view
+      window.pageYOffset + this.navEl.nativeElement.offsetHeight;
 
     this.housingTop = this.housingEl.nativeElement.offsetTop;
     this.controllerTop = this.controllerEl.nativeElement.offsetTop;
@@ -112,7 +107,7 @@ export class TheQuantumProComponent {
       pageYOffset < this.startedTop
     ) {
       this.currentActive = 6;
-    } else if (pageYOffset >= this.startedTop) {
+    } else if (pageYOffset >= this.startedTop - 10) {
       this.currentActive = 7;
     } else {
       this.currentActive = 0;

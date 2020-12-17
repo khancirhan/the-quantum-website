@@ -91,7 +91,6 @@
   .heading {
     font-size: 2.2rem;
     font-weight: 700;
-    margin-bottom: 2rem;
   }
 
   .gallery {
@@ -114,5 +113,96 @@
   text-align: left;
 }
 
-.img {
+@media screen and (max-width: 768px) {
+  .about {
+    padding-top: 3rem;
+
+    .wrapper {
+      text-align: center;
+      padding-right: 0;
+    }
+
+    .heading {
+      font-size: 1.75rem;
+      line-height: 2.25rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .sub-heading {
+      margin-bottom: 2rem;
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+
+    .email {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .about-image-wrapper {
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .achievements {
+    padding: 3rem 0 1rem;
+
+    .col-6 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .icon {
+      height: 56px;
+      width: 56px;
+      margin-bottom: 1rem;
+    }
+
+    .count {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+    }
+
+    .message {
+      font-size: 0.9rem;
+    }
+  }
+
+  .why-us {
+    padding: 3rem 0;
+
+    .heading {
+      text-align: center;
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .item {
+      margin-top: 1.5rem;
+      font-size: 1rem;
+    }
+  }
+
+  .documentation {
+    padding: 3rem 0;
+
+    .heading {
+      text-align: center;
+      font-size: 1.75rem;
+    }
+
+    .gallery {
+      margin-top: 2rem;
+
+      .gallery-img {
+        width: 100%;
+        height: 310px;
+      }
+    }
+  }
 }

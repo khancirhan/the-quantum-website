@@ -14,6 +14,10 @@
   font-family: "Eina", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+html {
+  scroll-behavior: unset !important;
+}
+
 .container {
   max-width: 1150px !important;
   padding: 0 2rem;

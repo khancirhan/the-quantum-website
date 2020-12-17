@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   @Input('background') background = 'transparent';
+  isOpen = false;
 
   classes: { [key: string]: string } = {
     transparent: 'bg-transparent',

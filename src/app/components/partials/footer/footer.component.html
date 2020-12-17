@@ -34,7 +34,19 @@
             <div class="footer-link-title">{{ f.title }}</div>
             <div>
               <ng-container *ngFor="let l of f.links">
-                <a [href]="l.href" class="footer-link">
+                <a
+                  *ngIf="l.href != undefined"
+                  [href]="l.href"
+                  class="footer-link"
+                >
+                  {{ l.text }}
+                </a>
+                <a
+                  *ngIf="l.path != undefined"
+                  [routerLink]="l.path"
+                  [fragment]="l.fragment == undefined ? '' : l.fragment"
+                  class="footer-link"
+                >
                   {{ l.text }}
                 </a>
               </ng-container>

@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './faq.component.html',
   styleUrls: ['./faq.component.scss'],
 })
-export class FaqComponent implements OnInit {
+export class FaqComponent {
   faqs = [
     {
       heading: 'What is included when purchasing TheQuantum?',
@@ -30,6 +30,4 @@ export class FaqComponent implements OnInit {
   ];
 
   constructor() {}
-
-  ngOnInit(): void {}
 }
