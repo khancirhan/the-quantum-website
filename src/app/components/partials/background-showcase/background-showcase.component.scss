@@ -4,3 +4,9 @@
   height: 65vh;
   background-color: var(--primary);
 }
+
+@media screen and (max-width: 768px) {
+  .showcase {
+    height: 50vh;
+  }
+}

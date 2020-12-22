@@ -1,12 +1,21 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
+import { fadeInUp, zoomIn } from 'src/app/directives/animate/animation';
 
 @Component({
   selector: 'app-the-quantum-pro',
   templateUrl: './the-quantum-pro.component.html',
   styleUrls: ['./the-quantum-pro.component.scss'],
+  animations: [fadeInUp, zoomIn],
 })
-export class TheQuantumProComponent {
+export class TheQuantumProComponent implements OnInit {
   @ViewChild('nav') navEl: ElementRef;
+  @ViewChild('navList') navListEl: ElementRef;
 
   @ViewChild('housingEl') housingEl: ElementRef;
   @ViewChild('controllerEl') controllerEl: ElementRef;
@@ -58,6 +67,8 @@ export class TheQuantumProComponent {
 
   constructor() {}
 
+  ngOnInit(): void {}
+
   scrollToElement(elementId: string): void {
     const el = document.getElementById(elementId);
 
@@ -69,8 +80,11 @@ export class TheQuantumProComponent {
 
   @HostListener('window:scroll', ['$event'])
   checkOffsetTop() {
-    const pageYOffset =
+    let pageYOffset =
       window.pageYOffset + this.navEl.nativeElement.offsetHeight;
+
+    // For lg, md and sm screens, add top navbar height as well
+    if (window.innerWidth <= 991) pageYOffset += 66;
 
     this.housingTop = this.housingEl.nativeElement.offsetTop;
     this.controllerTop = this.controllerEl.nativeElement.offsetTop;
@@ -107,10 +121,17 @@ export class TheQuantumProComponent {
       pageYOffset < this.startedTop
     ) {
       this.currentActive = 6;
-    } else if (pageYOffset >= this.startedTop - 10) {
+    } else if (pageYOffset >= this.startedTop) {
       this.currentActive = 7;
     } else {
       this.currentActive = 0;
+    }
+
+    if (this.currentActive != 0) {
+      const scrollOffset = (this.currentActive - 1) * 150;
+      this.navListEl.nativeElement.scrollTo({
+        left: scrollOffset,
+      });
     }
   }
 }

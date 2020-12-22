@@ -172,6 +172,23 @@
     background-color: rgba(255, 255, 255, 1) !important;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
 
+    .hamburger-menu {
+      width: 30%;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .navbar-toggler {
+      padding: 0;
+      box-shadow: none;
+      outline: none;
+    }
+
+    .link-primary {
+      width: 30%;
+      text-align: right;
+    }
+
     .nav-menu {
       align-items: flex-start;
     }
@@ -195,7 +212,6 @@
       display: block;
       width: 100%;
       margin-top: 1rem;
-      margin-bottom: 0.5rem;
     }
   }
 

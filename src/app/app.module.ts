@@ -1,5 +1,6 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,7 @@ import { PlaceOrderComponent } from './components/place-order/place-order.compon
 import { PricingComponent } from './components/pricing/pricing.component';
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 import { TheQuantumProComponent } from './components/the-quantum-pro/the-quantum-pro.component';
+import { AnimateInViewportDirective } from './directives/animate/animate-in-viewport.directive';
 
 @NgModule({
   declarations: [
@@ -37,8 +39,9 @@ import { TheQuantumProComponent } from './components/the-quantum-pro/the-quantum
     PrivacyPolicyComponent,
     GetHelpComponent,
     BackgroundShowcaseComponent,
+    AnimateInViewportDirective,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule],
   providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent],

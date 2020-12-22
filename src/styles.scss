@@ -4,6 +4,7 @@
   --primary: #{$primary};
   --secondary: #{$secondary};
   --muted: #{$muted};
+  --container-max-width: 1150px;
 }
 
 @import "~bootstrap/scss/bootstrap.scss";
@@ -19,7 +20,7 @@ html {
 }
 
 .container {
-  max-width: 1150px !important;
+  max-width: var(--container-max-width) !important;
   padding: 0 2rem;
 }
 
@@ -163,4 +164,8 @@ html {
       border-radius: 14px;
     }
   }
+}
+
+.hidden {
+  visibility: hidden !important;
 }

@@ -6,11 +6,35 @@
   <section class="hero">
     <div class="container">
       <div class="wrapper">
-        <h4 class="title">TheQuantumPRO</h4>
-        <h1 class="heading">
+        <h4
+          class="title"
+          [@zoomIn]="{ value: 'hidden', params: { duration: '0.6s' } }"
+          [animateInViewport]="{ animationName: 'zoomIn' }"
+        >
+          TheQuantumPRO
+        </h4>
+        <h1
+          class="heading"
+          [@fadeInUp]="{
+            value: 'hidden',
+            params: { delay: '0.2s' }
+          }"
+          [animateInViewport]="{
+            animationName: 'fadeInUp'
+          }"
+        >
           The ultimate solution <br />for Construction TimeLapse
         </h1>
-        <h5 class="sub-heading">
+        <h5
+          class="sub-heading"
+          [@fadeInUp]="{
+            value: 'hidden',
+            params: { delay: '0.6s' }
+          }"
+          [animateInViewport]="{
+            animationName: 'fadeInUp'
+          }"
+        >
           The perfect set of system & tools to document your construction.
           <br />
           Our systems deliver unrivaled experience, delivering 99.999% uptime &
@@ -24,7 +48,7 @@
   <section #nav class="navigation">
     <div class="container">
       <nav>
-        <ol class="nav-list">
+        <ol class="nav-list" #navList>
           <li class="nav-item" *ngFor="let l of navLinks; index as i">
             <a
               (click)="scrollToElement(l.elementId)"
@@ -64,7 +88,12 @@
         </div>
         <div class="flex-66">
           <div class="img-wrapper align-right">
-            <img src="assets/images/tq.png" alt="Dashboard Image" />
+            <img
+              @zoomIn
+              [animateInViewport]="{ animationName: 'zoomIn' }"
+              src="assets/images/tq.png"
+              alt="Dashboard Image"
+            />
           </div>
         </div>
       </div>
@@ -95,6 +124,8 @@
         <div class="flex-66">
           <div class="img-wrapper">
             <img
+              @zoomIn
+              [animateInViewport]="{ animationName: 'zoomIn' }"
               class="radius"
               src="assets/images/ctrl.png"
               alt="Controller Image"
@@ -130,7 +161,12 @@
         </div>
         <div class="flex-66">
           <div class="img-wrapper align-right">
-            <img src="assets/images/tq.png" alt="Dashboard Image" />
+            <img
+              @zoomIn
+              [animateInViewport]="{ animationName: 'zoomIn' }"
+              src="assets/images/tq.png"
+              alt="Dashboard Image"
+            />
           </div>
         </div>
       </div>
@@ -159,6 +195,8 @@
         <div class="flex-66">
           <div class="img-wrapper">
             <img
+              @zoomIn
+              [animateInViewport]="{ animationName: 'zoomIn' }"
               class="radius"
               src="assets/images/dashboard.svg"
               alt="Camera Image"
@@ -197,7 +235,12 @@
         </div>
         <div class="flex-66">
           <div class="img-wrapper align-right">
-            <img src="assets/test.png" alt="Dashboard Image" />
+            <img
+              @zoomIn
+              [animateInViewport]="{ animationName: 'zoomIn' }"
+              src="assets/test.png"
+              alt="Dashboard Image"
+            />
           </div>
         </div>
       </div>
@@ -227,7 +270,12 @@
         </div>
         <div class="flex-66">
           <div class="img-wrapper">
-            <img src="assets/images/camera.jpg" alt="Camera Image" />
+            <img
+              @zoomIn
+              [animateInViewport]="{ animationName: 'zoomIn' }"
+              src="assets/images/camera.jpg"
+              alt="Camera Image"
+            />
           </div>
         </div>
       </div>

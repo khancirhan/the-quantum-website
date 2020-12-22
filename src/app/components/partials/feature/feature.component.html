@@ -1,4 +1,10 @@
-<ng-container>
+<div
+  [@fadeInUp]="{
+    value: 'hidden',
+    params: { delay: '0.3s' }
+  }"
+  [animateInViewport]="{ animationName: 'fadeInUp' }"
+>
   <div class="icon">
     <ng-content select="#icon"></ng-content>
   </div>
@@ -10,4 +16,4 @@
   <p class="info">
     <ng-content select="#info"></ng-content>
   </p>
-</ng-container>
+</div>

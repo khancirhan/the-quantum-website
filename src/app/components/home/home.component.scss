@@ -51,8 +51,8 @@
   .logo-wrapper {
     margin-top: 1.5rem;
     display: flex;
-    overflow-x: scroll;
     justify-content: space-between;
+    overflow-x: scroll;
 
     &::-webkit-scrollbar {
       /* Safari and Chrome */

@@ -1,19 +1,22 @@
 <nav [class]="'navbar navbar-expand-lg ' + classes[background]">
   <div class="container">
-    <button
-      class="navbar-toggler"
-      (click)="isOpen = !isOpen"
-      [ngClass]="{
-        collapsed: !isOpen,
-        open: isOpen
-      }"
-      type="button"
-    >
-      <div class="toggler-icon">
-        <div class="bar1 bar-top"></div>
-        <div class="bar2 bar-bottom"></div>
-      </div>
-    </button>
+    <div class="hamburger-menu">
+      <button
+        class="navbar-toggler"
+        (click)="isOpen = !isOpen"
+        [ngClass]="{
+          collapsed: !isOpen,
+          open: isOpen
+        }"
+        type="button"
+      >
+        <div class="toggler-icon">
+          <div class="bar1 bar-top"></div>
+          <div class="bar2 bar-bottom"></div>
+        </div>
+      </button>
+    </div>
+
     <a class="navbar-icon" routerLink="/">
       <img
         class="logo-lg d-none d-lg-block"

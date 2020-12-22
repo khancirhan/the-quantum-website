@@ -5,14 +5,18 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
+import { fadeInUp, zoomIn } from '../../directives/animate/animation';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
+  animations: [fadeInUp, zoomIn],
 })
 export class HomeComponent implements OnInit, AfterViewInit {
   @ViewChild('video') video: ElementRef;
+
+  isPlaying = true;
 
   featureSet1 = [
     {
@@ -58,6 +62,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   constructor() {}
 
+  ngOnInit(): void {}
+
   ngAfterViewInit(): void {
     if (this.video.nativeElement.paused) {
       this.video.nativeElement.muted = true;
@@ -66,17 +72,17 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   pauseVideo(video: HTMLVideoElement): void {
-    if (!video.paused) {
+    if (this.isPlaying && !video.paused) {
       video.pause();
+      this.isPlaying = false;
     }
   }
 
   resumeVideo(video: HTMLVideoElement): void {
-    if (video.paused) {
+    if (!this.isPlaying && video.paused) {
       video.muted = true;
       video.play();
+      this.isPlaying = true;
     }
   }
-
-  ngOnInit(): void {}
 }

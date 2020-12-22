@@ -8,19 +8,61 @@
       <div class="row">
         <div class="col-md-7">
           <div class="wrapper">
-            <h1 class="heading">Share progress <br />across the globe</h1>
-            <h5 class="sub-heading">
+            <h1
+              class="heading"
+              [@fadeInUp]="{
+                value: 'hidden',
+                params: { delay: '0.2s' }
+              }"
+              [animateInViewport]="{
+                animationName: 'fadeInUp'
+              }"
+            >
+              <span class="word">Share </span>
+              <span class="word">progress </span><br />
+              <span class="word">across </span>
+              <span class="word">the </span>
+              <span class="word">globe</span>
+            </h1>
+            <h5
+              class="sub-heading"
+              [@fadeInUp]="{
+                value: 'hidden',
+                params: { delay: '0.6s' }
+              }"
+              [animateInViewport]="{
+                animationName: 'fadeInUp'
+              }"
+            >
               Get access to your project site anytime, anywhere. Being used by
               over two thousand people globally — from individuals, to the
               largest companies.
             </h5>
-            <div class="buttons">
+            <div
+              class="buttons"
+              [@fadeInUp]="{
+                value: 'hidden',
+                params: { delay: '0.8s' }
+              }"
+              [animateInViewport]="{
+                animationName: 'fadeInUp'
+              }"
+            >
               <a class="btn btn-primary" routerLink="/place-order">Buy Now</a>
               <a class="btn btn-outline-light" routerLink="/pricing"
                 >See pricing</a
               >
             </div>
-            <div class="extra">
+            <div
+              class="extra"
+              [@fadeInUp]="{
+                value: 'hidden',
+                params: { delay: '0.8s' }
+              }"
+              [animateInViewport]="{
+                animationName: 'fadeInUp'
+              }"
+            >
               Our systems are built extra-tough for the any jobsite.
               <br />
               The units are able to operate in extreme temperatures.
@@ -75,6 +117,8 @@
         <div class="flex-66">
           <div class="img-wrapper align-right">
             <img
+              @zoomIn
+              [animateInViewport]="{ animationName: 'zoomIn' }"
               class="radius"
               src="assets/images/dashboard.svg"
               alt="Dashboard Image"
@@ -169,7 +213,6 @@
       </div>
     </div>
   </section>
-
   <!-- ACTION -->
   <section class="action">
     <div class="container">

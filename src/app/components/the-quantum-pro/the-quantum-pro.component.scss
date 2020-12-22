@@ -1,3 +1,5 @@
+@import "src/assets/scss/variables";
+
 .hero {
   padding: 10rem 0;
   color: #000;
@@ -40,17 +42,35 @@
 
   nav {
     padding-top: 0.5rem;
-    overflow: auto;
   }
 
   .nav-list {
     list-style: none;
     padding: 0;
+    margin: 0;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
-    background-color: aquas;
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar {
+      /* Safari and Chrome */
+      width: 0px;
+      background: transparent;
+    }
+
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .nav-item {
+    min-width: 150px;
+    width: 150px;
+
+    &:last-child {
+      width: auto;
+      min-width: auto;
+    }
   }
 
   .nav-link {
@@ -59,7 +79,7 @@
 
     span {
       display: block;
-    }
+    }  
 
     .counter {
       color: rgba(0, 0, 0, 0.25);
@@ -70,6 +90,7 @@
 
     .text {
       color: rgba(0, 0, 0, 0.85);
+      font-size: 0.9rem;
       font-weight: 600;
       transition: all 0.2s ease-out;
 
