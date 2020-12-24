@@ -6,16 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent implements OnInit {
-  year: number;
+  year = new Date().getFullYear();
 
-  constructor() {
-    // Get current date.
-    const date = new Date();
-    // Add 6 days to it
-    date.setDate(date.getDate() + 8);
-    // Get year
-    this.year = date.getFullYear();
-  }
+  constructor() {}
 
   footerLinks: any[] = [
     {
