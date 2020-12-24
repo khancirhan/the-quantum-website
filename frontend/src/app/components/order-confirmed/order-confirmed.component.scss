@@ -1,0 +1,90 @@
+@import "src/assets/scss/variables";
+
+.order-confirmed {
+  padding: 9rem 0 6rem;
+  background-color: var(--secondary);
+
+  .card {
+    position: relative;
+    border-radius: 30px;
+    border: 0;
+
+    .card-body {
+      padding: 5rem 3rem 6rem;
+      width: 100%;
+      max-width: $max-card-width;
+      margin: auto;
+    }
+  }
+
+  .flex-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .confirmed-img {
+    display: block;
+    margin-bottom: 2rem;
+    height: 200px;
+    width: 200px;
+  }
+
+  .heading {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .sub-heading {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .order-id {
+    font-weight: 600 !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .order-confirmed {
+    padding: 8rem 0 4rem;
+
+    .card {
+      border-radius: $card-md-border-radius;
+
+      .card-body {
+        padding: $card-md-pad-y $card-md-pad-x;
+        text-align: center;
+      }
+    }
+
+    .confirmed-img {
+      height: 150px;
+      width: 150px;
+    }
+
+    .heading {
+      font-size: 1.7rem;
+    }
+
+    .sub-heading {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .order-confirmed {
+    .card {
+      .card-body {
+        padding: $card-sm-pad-y $card-sm-pad-x;
+      }
+    }
+  }
+}

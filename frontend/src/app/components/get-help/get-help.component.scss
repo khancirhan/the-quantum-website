@@ -1,0 +1,72 @@
+@import "src/assets/scss/variables";
+@import "src/assets/scss/form";
+
+.get-help {
+  padding: 9rem 0 6rem;
+  background-color: var(--secondary);
+
+  .card {
+    position: relative;
+    border-radius: 30px;
+    border: 0;
+
+    .card-body {
+      padding: 5rem 3rem;
+      width: 100%;
+      max-width: $max-card-width;
+      margin: auto;
+    }
+  }
+
+  .heading {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .sub-heading {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    margin-top: 2rem;
+    padding: 0.45rem 3.5rem 0.35rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .get-help {
+    padding: 8rem 0 4rem;
+
+    .card {
+      border-radius: $card-md-border-radius;
+
+      .card-body {
+        padding: $card-md-pad-y $card-md-pad-x;
+        text-align: center;
+      }
+    }
+
+    .heading {
+      font-size: 1.7rem;
+    }
+
+    .sub-heading {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .get-help {
+    .card {
+      .card-body {
+        padding: $card-sm-pad-y $card-sm-pad-x;
+      }
+    }
+  }
+}

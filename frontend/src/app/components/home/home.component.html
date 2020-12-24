@@ -1,0 +1,268 @@
+<div class="main-wrapper">
+  <!-- NAVBAR -->
+  <app-navbar [background]="'transparent'"></app-navbar>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <div class="wrapper">
+            <h1
+              class="heading"
+              [@fadeInUp]="{
+                value: 'hidden',
+                params: { delay: '0.2s' }
+              }"
+              [animateInViewport]="{
+                animationName: 'fadeInUp'
+              }"
+            >
+              <span class="word">Share </span>
+              <span class="word">progress </span><br />
+              <span class="word">across </span>
+              <span class="word">the </span>
+              <span class="word">globe</span>
+            </h1>
+            <h5
+              class="sub-heading"
+              [@fadeInUp]="{
+                value: 'hidden',
+                params: { delay: '0.6s' }
+              }"
+              [animateInViewport]="{
+                animationName: 'fadeInUp'
+              }"
+            >
+              Get access to your project site anytime, anywhere. Being used by
+              over two thousand people globally — from individuals, to the
+              largest companies.
+            </h5>
+            <div
+              class="buttons"
+              [@fadeInUp]="{
+                value: 'hidden',
+                params: { delay: '0.8s' }
+              }"
+              [animateInViewport]="{
+                animationName: 'fadeInUp'
+              }"
+            >
+              <a class="btn btn-primary" routerLink="/place-order">Buy Now</a>
+              <a class="btn btn-outline-light" routerLink="/pricing"
+                >See pricing</a
+              >
+            </div>
+            <div
+              class="extra"
+              [@fadeInUp]="{
+                value: 'hidden',
+                params: { delay: '0.8s' }
+              }"
+              [animateInViewport]="{
+                animationName: 'fadeInUp'
+              }"
+            >
+              Our systems are built extra-tough for the any jobsite.
+              <br />
+              The units are able to operate in extreme temperatures.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENTS -->
+  <section class="clients">
+    <div class="container">
+      <h6 class="heading">TRUSTED BY SOME OF THE WORLS’S BEST COMPANIES.</h6>
+      <div class="logo-wrapper">
+        <img class="logo" src="assets/images/emaar.png" alt="" />
+        <img class="logo" src="assets/images/ibm.png" alt="" />
+        <img class="logo" src="assets/images/emaar.png" alt="" />
+        <img class="logo" src="assets/images/ibm.png" alt="" />
+        <img class="logo" src="assets/images/emaar.png" alt="" />
+        <img class="logo" src="assets/images/ibm.png" alt="" />
+        <!--  -->
+        <img class="logo" src="assets/images/ibm.png" alt="" />
+        <img class="logo" src="assets/images/ibm.png" alt="" />
+        <img class="logo" src="assets/images/ibm.png" alt="" />
+        <img class="logo" src="assets/images/ibm.png" alt="" />
+        <img class="logo" src="assets/images/ibm.png" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <!-- CONFIGURE -->
+  <section class="configure">
+    <div class="container">
+      <div class="flexbox">
+        <div class="flex-33">
+          <div class="wrapper">
+            <app-aside-overview>
+              <ng-container id="title">Configure</ng-container>
+              <ng-container id="heading"> Smart TimeLapse System </ng-container>
+              <ng-container id="info">
+                With an intuitive interface, thoughtful features and a powerful
+                controller, you can stay focused on managing your projects
+                remotely.
+              </ng-container>
+              <ng-container id="action">
+                <button class="btn btn-primary">Learn More</button>
+              </ng-container>
+            </app-aside-overview>
+          </div>
+        </div>
+        <div class="flex-66">
+          <div class="img-wrapper align-right">
+            <img
+              @zoomIn
+              [animateInViewport]="{ animationName: 'zoomIn' }"
+              class="radius"
+              src="assets/images/dashboard.svg"
+              alt="Dashboard Image"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features f1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4" *ngFor="let f of featureSet1">
+          <div class="wrapper">
+            <app-feature>
+              <ng-container id="icon">
+                <img [src]="f.icon" [alt]="f.title" />
+              </ng-container>
+              <ng-container id="title">{{ f.title }}</ng-container>
+              <ng-container id="info">
+                {{ f.info }}
+              </ng-container>
+            </app-feature>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUSTED -->
+  <section class="trusted bg-secondary">
+    <div class="container">
+      <div class="flexbox row-reverse">
+        <div class="flex-33">
+          <div class="wrapper">
+            <app-aside-overview>
+              <ng-container id="title">The Beast</ng-container>
+              <ng-container id="heading">
+                Trusted by Top Developers
+              </ng-container>
+              <ng-container id="info"
+                >We enable our customers to capture and broadcast everything
+                from city skylines and construction sites to cruise ships.
+              </ng-container>
+              <ng-container id="action">
+                <button class="btn btn-primary">Learn More</button>
+              </ng-container>
+            </app-aside-overview>
+          </div>
+        </div>
+        <div class="flex-66">
+          <div class="img-wrapper">
+            <video
+              loop
+              autoplay
+              muted
+              #video
+              (mouseover)="pauseVideo(video)"
+              (mouseleave)="resumeVideo(video)"
+            >
+              <source
+                src="https://timelapseme.com/video/quantum.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video.
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features f2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4" *ngFor="let f of featureSet2">
+          <div class="wrapper">
+            <app-feature>
+              <ng-container id="icon">
+                <img [src]="f.icon" [alt]="f.title" />
+              </ng-container>
+              <ng-container id="title">{{ f.title }}</ng-container>
+              <ng-container id="info">
+                {{ f.info }}
+              </ng-container>
+            </app-feature>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ACTION -->
+  <section class="action">
+    <div class="container">
+      <div class="flexbox">
+        <div class="flex-33">
+          <div class="wrapper">
+            <app-aside-overview>
+              <ng-container id="title">Video</ng-container>
+              <ng-container id="heading"> See it in Action </ng-container>
+              <ng-container id="info"
+                >With an intuitive interface, thoughtful features and a powerful
+                controller, you can stay focused on managing your projects
+                remotely.
+              </ng-container>
+              <ng-container id="action">
+                <button class="btn btn-primary">Learn More</button>
+              </ng-container>
+            </app-aside-overview>
+          </div>
+        </div>
+        <div class="flex-66">
+          <div class="img-wrapper align-right">
+            <img
+              class="video radius"
+              src="assets/images/works.png"
+              alt="Video"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GET STARTED -->
+  <section class="started">
+    <app-banner>
+      <ng-container id="heading">
+        Get started with TheQuantum today
+      </ng-container>
+      <ng-container id="subHeading">
+        Monitor your construction sites from anywhere, anytime.
+      </ng-container>
+      <ng-container id="action">
+        <button class="btn btn-light">Learn More</button>
+      </ng-container>
+    </app-banner>
+  </section>
+
+  <!-- FOOTER -->
+  <section class="footer">
+    <app-footer></app-footer>
+  </section>
+</div>

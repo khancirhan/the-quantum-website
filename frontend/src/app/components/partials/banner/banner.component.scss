@@ -1,0 +1,37 @@
+.overlay {
+  position: relative;
+  padding-top: 4rem;
+  padding-bottom: 4.5rem;
+  background: url(../../../../assets/images/banner.jpg) center/cover no-repeat;
+}
+
+.heading {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.8rem;
+}
+
+.sub-heading {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  color: rgba(#fff, 0.85);
+}
+
+@media screen and (max-width: 768px) {
+  .overlay {
+    padding-top: 2.5rem;
+    padding-bottom: 3rem;
+    text-align: center;
+  }
+
+  .heading {
+    font-size: 1.75rem;
+  }
+
+  .sub-heading {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+}

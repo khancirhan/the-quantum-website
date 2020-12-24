@@ -1,0 +1,136 @@
+.hero {
+  padding: 10rem 0;
+  color: #fff;
+  background: url(../../../assets/images/home_circles.svg) -150px -260px/ 90% no-repeat,
+    url(../../../assets/images/landing_image.jpg) center/cover no-repeat;
+
+  .wrapper {
+    padding-right: 2rem;
+    margin-top: 2rem;
+
+    .heading {
+      font-size: 3.6rem;
+      font-weight: 700;
+      line-height: 4.2rem;
+    }
+
+    .sub-heading {
+      margin-top: 1.2rem;
+      font-size: 1.5rem;
+      font-weight: 300;
+      line-height: 2rem;
+      color: rgba(#fff, 0.85);
+    }
+
+    .buttons {
+      margin-top: 2.5rem;
+    }
+
+    .btn-primary {
+      margin-right: 1rem;
+    }
+
+    .extra {
+      margin-top: 1.4rem;
+      font-size: 0.8rem;
+      line-height: 1.25rem;
+    }
+  }
+}
+
+.clients {
+  padding-top: 6rem;
+
+  .heading {
+    text-align: center;
+    color: var(--muted);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .logo-wrapper {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar {
+      /* Safari and Chrome */
+      width: 0px;
+      background: transparent;
+    }
+
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .logo {
+    display: block;
+    height: 64px;
+  }
+}
+
+.features {
+  .wrapper {
+    margin-right: 3rem;
+  }
+}
+
+.f1 {
+  padding-bottom: 6rem;
+}
+
+.f2 {
+  padding-top: 6rem;
+}
+
+.started {
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 7rem 0 6rem;
+
+    .wrapper {
+      padding-right: 0;
+
+      .heading {
+        font-size: 2.5rem;
+        line-height: 3rem;
+      }
+
+      .sub-heading {
+        margin-top: 1.2rem;
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+      }
+    }
+  }
+
+  .clients {
+    padding-top: 4rem;
+
+    .heading {
+      font-size: 0.85rem;
+    }
+
+    .logo {
+      height: 48px;
+    }
+  }
+
+  .features {
+    .wrapper {
+      margin-right: 0;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .f1 {
+    padding-bottom: 3rem;
+  }
+
+  .f2 {
+    padding-top: 3rem;
+  }
+}

@@ -1,0 +1,61 @@
+<ng-container>
+  <div class="wrapper">
+    <div class="container">
+      <div class="contact-wrapper">
+        <div class="flex-50">
+          <div class="title">Subscribe to our updates</div>
+          <div class="subtitle">
+            A monthly digest of the latest TQ news, articles and resources.
+          </div>
+        </div>
+        <div class="flex-50">
+          <div class="form">
+            <div class="form-group">
+              <input
+                type="text"
+                name=""
+                class="form-control"
+                placeholder="Your email address"
+              />
+              <button class="btn btn-primary btn-attached">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="links">
+        <div class="row">
+          <div
+            class="col-6 col-md-4 col-lg-2 footer-link-wrapper"
+            *ngFor="let f of footerLinks"
+          >
+            <div class="footer-link-title">{{ f.title }}</div>
+            <div>
+              <ng-container *ngFor="let l of f.links">
+                <a
+                  *ngIf="l.href != undefined"
+                  [href]="l.href"
+                  class="footer-link"
+                >
+                  {{ l.text }}
+                </a>
+                <a
+                  *ngIf="l.path != undefined"
+                  [routerLink]="l.path"
+                  [fragment]="l.fragment == undefined ? '' : l.fragment"
+                  class="footer-link"
+                >
+                  {{ l.text }}
+                </a>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">© {{ year }} TheQuantum. All rights reserved.</div>
+    </div>
+  </div>
+</ng-container>

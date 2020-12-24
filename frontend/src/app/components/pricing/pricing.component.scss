@@ -1,0 +1,350 @@
+@import "src/assets/scss/variables";
+
+.main-wrapper {
+  background-color: var(--secondary);
+}
+
+.pricing {
+  padding: 9rem 0 6rem;
+  background-color: var(--secondary);
+
+  .card {
+    border-radius: 30px;
+    border: 0;
+    text-align: center;
+    height: 100%;
+
+    .card-body {
+      padding: 5rem 6.3rem 4rem;
+    }
+  }
+
+  .product {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .info {
+    margin-top: 1rem;
+    font-weight: 300;
+    line-height: 1.375rem;
+  }
+
+  .price {
+    margin-top: 3.5rem;
+    font-size: 3.2rem;
+    font-weight: 800;
+  }
+
+  .sub-heading {
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.375rem;
+  }
+
+  .product-feature-list {
+    margin-top: 4rem;
+    margin-bottom: 3.5rem;
+    text-align: left;
+    list-style: none;
+    padding: 0;
+
+    .feature-item {
+      display: inline-flex;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+      font-weight: 300;
+      line-height: 1.375rem;
+
+      &::before {
+        content: "*";
+        margin-right: 1rem;
+        color: var(--primary);
+      }
+    }
+  }
+
+  .btn-pricing {
+    padding: 0.45rem 3.5rem 0.35rem;
+  }
+
+  .btn-muted {
+    background-color: var(--muted);
+    color: #fff;
+  }
+
+  .extra {
+    font-weight: 200;
+    font-size: 0.8rem;
+    margin-top: 2rem;
+    margin-bottom: -2rem;
+  }
+}
+
+.save-big {
+  .heading {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2rem;
+  }
+
+  .sub-heading {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 2rem;
+  }
+}
+
+.comparison {
+  position: relative;
+  padding: 5rem 0 7rem;
+
+  .flex-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  .left,
+  .right {
+    width: 48%;
+  }
+
+  .vs-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+
+    .vs-logo {
+      margin-left: -2rem;
+      margin-right: -2rem;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 100px;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #fff;
+      background-color: var(--primary);
+      border-radius: 100%;
+    }
+  }
+
+  .left {
+    .card {
+      border: 2px solid var(--primary);
+      border-radius: 8px;
+
+      .card-body {
+        padding: 2rem;
+      }
+    }
+
+    .logo {
+      img {
+        width: 150px;
+      }
+    }
+
+    .content {
+      margin: 1.2rem 0;
+      margin-left: 1.7rem;
+
+      .price-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .actual-price {
+        font-size: 3.2rem;
+        font-weight: 700;
+        margin-right: 0.5rem;
+      }
+
+      .discount {
+        font-size: 1rem;
+        color: red;
+      }
+
+      .duration {
+        font-weight: 300;
+      }
+
+      .features {
+        margin-top: 1.5rem;
+        list-style: none;
+        padding: 0;
+
+        .feature-item {
+          font-size: 0.9rem;
+          font-weight: 600;
+          margin-bottom: 0.6rem;
+
+          &::before {
+            content: ">";
+            margin-right: 1rem;
+            color: var(--primary);
+          }
+        }
+      }
+
+      .message {
+        margin-top: 1.5rem;
+        font-size: 0.7rem;
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .card {
+      border: 2px solid rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+
+      .card-body {
+        padding: 1.2rem 1.3rem;
+        padding-left: 3.5rem;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pricing {
+    padding: 8rem 0 4rem;
+
+    .col-md-6:first-child {
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      border-radius: $card-md-border-radius;
+
+      .card-body {
+        padding: 3rem 2rem;
+      }
+    }
+
+    .product {
+      font-size: 1.7rem;
+    }
+
+    .info {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .price {
+      margin-top: 1.8rem;
+      font-size: 2.6rem;
+    }
+
+    .sub-heading {
+      font-size: 1rem;
+    }
+
+    .product-feature-list {
+      margin-top: 2.8rem;
+      margin-bottom: 1.8rem;
+
+      .feature-item {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .extra {
+      margin-bottom: -1rem;
+    }
+  }
+
+  .save-big {
+    .heading {
+      font-size: 1.7rem;
+    }
+
+    .sub-heading {
+      margin-top: 0.6rem;
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  .comparison {
+    padding: 3rem 0 4rem;
+
+    .flex-wrapper {
+      flex-direction: column;
+    }
+
+    .left,
+    .right {
+      width: 100%;
+    }
+
+    .vs-wrapper {
+      .vs-logo {
+        margin-top: -1rem;
+        margin-bottom: -1rem;
+        width: 80px;
+        height: 80px;
+        font-size: 1.7rem;
+      }
+    }
+
+    .left {
+      .card {
+        .card-body {
+          padding: 1.5rem;
+        }
+      }
+
+      .logo {
+        img {
+          width: 120px;
+        }
+      }
+
+      .content {
+        margin: 1rem 0;
+        margin-left: 1.5rem;
+
+        .actual-price {
+          font-size: 2.2rem;
+        }
+
+        .discount {
+          font-size: 0.8rem;
+        }
+
+        .duration {
+          font-size: 1.05rem;
+        }
+
+        .message {
+          margin-top: 1.5rem;
+          font-size: 0.7rem;
+        }
+      }
+    }
+
+    .right {
+      .card {
+        margin-bottom: 1rem;
+
+        .card-body {
+          padding: 1.2rem 1.3rem;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}

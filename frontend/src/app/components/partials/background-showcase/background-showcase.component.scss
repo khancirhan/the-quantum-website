@@ -1,0 +1,12 @@
+.showcase {
+  position: absolute;
+  width: 100%;
+  height: 65vh;
+  background-color: var(--primary);
+}
+
+@media screen and (max-width: 768px) {
+  .showcase {
+    height: 50vh;
+  }
+}

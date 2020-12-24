@@ -1,0 +1,77 @@
+<nav [class]="'navbar navbar-expand-lg ' + classes[background]">
+  <div class="container">
+    <div class="hamburger-menu">
+      <button
+        class="navbar-toggler"
+        (click)="isOpen = !isOpen"
+        [ngClass]="{
+          collapsed: !isOpen,
+          open: isOpen
+        }"
+        type="button"
+      >
+        <div class="toggler-icon">
+          <div class="bar1 bar-top"></div>
+          <div class="bar2 bar-bottom"></div>
+        </div>
+      </button>
+    </div>
+
+    <a class="navbar-icon" routerLink="/">
+      <img
+        class="logo-lg d-none d-lg-block"
+        [src]="navbarLogo"
+        alt="TheQuantum Logo"
+      />
+      <img
+        class="logo-sm d-sm-block d-lg-none"
+        src="assets/images/timelapse.svg"
+        alt="TheQuantum Logo"
+      />
+    </a>
+
+    <a class="link-primary d-sm-block d-lg-none">Sign In</a>
+
+    <div class="collapse navbar-collapse" [class.show]="isOpen">
+      <ul class="navbar-nav nav-menu">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/the-quantum-pro"
+            routerLinkActive="active"
+            >For Individuals</a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/the-quantum-pro"
+            routerLinkActive="active"
+            >For Companies</a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/faqs" routerLinkActive="active"
+            >Resources</a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/pricing" routerLinkActive="active"
+            >Pricing</a
+          >
+        </li>
+      </ul>
+      <ul class="navbar-nav nav-buttons">
+        <li class="nav-item d-none d-lg-block">
+          <a class="btn btn-signin">Sign In</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-buynow" routerLink="/place-order">Buy Now</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

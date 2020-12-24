@@ -1,0 +1,68 @@
+<div class="main-wrapper">
+  <!-- NAVBAR -->
+  <app-navbar [background]="'primary'"></app-navbar>
+
+  <!-- SHOWCASE -->
+  <app-background-showcase></app-background-showcase>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="heading">Frequently Asked Questions</h2>
+          <h5 class="sub-heading">
+            Hi, if you have questions or at any point you’re confused or too
+            annoyed to dig through this page to find the answer you’re looking
+            for, just email us at
+            <a href="mailto:support@thequantum.io" class="email"
+              >support@thequantum.io</a
+            >.
+          </h5>
+
+          <h5 class="sub-heading">
+            Here are the universe’s most frequently asked questions:
+          </h5>
+
+          <div class="accordion">
+            <!-- FAQ -->
+            <div
+              class="accordion-item"
+              *ngFor="let item of faqs; index as i; first as isFirst"
+            >
+              <h2 class="accordion-header" [id]="'heading' + i">
+                <button
+                  class="accordion-button"
+                  [class.collapsed]="!isFirst"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  [attr.data-bs-target]="'#collapse' + i"
+                  [attr.aria-controls]="'collapse' + i"
+                >
+                  <h5 class="accordian-heading">
+                    {{ item.heading }}
+                  </h5>
+                </button>
+              </h2>
+              <div
+                [id]="'collapse' + i"
+                class="accordion-collapse collapse"
+                [class.show]="isFirst"
+                [attr.aria-labelledby]="'heading' + i"
+              >
+                <div class="accordion-body">
+                  {{ item.body }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <section class="footer">
+    <app-footer></app-footer>
+  </section>
+</div>

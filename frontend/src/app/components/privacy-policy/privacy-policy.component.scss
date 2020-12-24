@@ -1,0 +1,87 @@
+.policy {
+  padding: 10rem 0 5rem;
+  background-color: var(--secondary);
+
+  .heading {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 3.5rem;
+  }
+
+  .sub-heading {
+    margin-top: 0.8rem;
+    color: var(--muted);
+    font-size: 0.95rem;
+    font-weight: 300;
+  }
+
+  .message {
+    margin-top: 2rem;
+    font-size: 1.125rem;
+    line-height: 1.7rem;
+    color: rgba(0, 0, 0, 0.85);
+  }
+}
+
+.terms-n-conditions {
+  padding: 4rem 0;
+
+  .terms {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 2rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .content {
+      font-size: 1.1rem;
+      line-height: 1.7rem;
+      color: rgba(0, 0, 0, 0.65);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .policy {
+    padding: 9rem 0 3rem;
+
+    .heading {
+      font-size: 1.7rem;
+      line-height: 2.2rem;
+    }
+
+    .sub-heading {
+      font-size: 0.8rem;
+    }
+
+    .message {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  .terms-n-conditions {
+    .terms {
+      .title {
+        font-size: 1.2rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .content {
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+}

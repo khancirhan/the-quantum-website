@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1384.5" height="982.9" viewBox="0 0 1384.5 982.9">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        stroke: #2b2b2b;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect class="cls-1" x="160.5" y="277" width="1440" height="730"/>
+    </clipPath>
+  </defs>
+  <title>Asset 4</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g class="cls-2">
+        <g id="Group-13">
+          <g id="Oval">
+            <path class="cls-3" d="M491.4,1C761.9,1,981.9,221,981.9,491.4s-220,490.5-490.5,490.5S1,761.9,1,491.4,221,1,491.4,1Zm0,914.5c233.9,0,424.1-190.2,424.1-424.1S725.3,67.3,491.4,67.3,67.3,257.6,67.3,491.4,257.6,915.5,491.4,915.5Z"/>
+          </g>
+          <g id="Oval-Copy">
+            <circle class="cls-3" cx="926.2" cy="491.4" r="457.3"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

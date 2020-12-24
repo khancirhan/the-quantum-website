@@ -1,0 +1,45 @@
+<div>
+  <h6
+    class="title"
+    [@fadeInUp]="{
+      value: 'hidden',
+      params: { delay: '0.2s' }
+    }"
+    [animateInViewport]="{ animationName: 'fadeInUp' }"
+  >
+    <ng-content select="#title"></ng-content>
+  </h6>
+
+  <h2
+    class="heading"
+    [@fadeInUp]="{
+      value: 'hidden',
+      params: { delay: '0.2s' }
+    }"
+    [animateInViewport]="{ animationName: 'fadeInUp' }"
+  >
+    <ng-content select="#heading"></ng-content>
+  </h2>
+
+  <p
+    class="info"
+    [@fadeInUp]="{
+      value: 'hidden',
+      params: { delay: '0.4s' }
+    }"
+    [animateInViewport]="{ animationName: 'fadeInUp' }"
+  >
+    <ng-content select="#info"></ng-content>
+  </p>
+
+  <div
+    class="action"
+    [@fadeInUp]="{
+      value: 'hidden',
+      params: { delay: '0.4s' }
+    }"
+    [animateInViewport]="{ animationName: 'fadeInUp' }"
+  >
+    <ng-content select="#action"> </ng-content>
+  </div>
+</div>

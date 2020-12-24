@@ -1,0 +1,120 @@
+@import "src/assets/scss/variables";
+
+.faq {
+  padding: 9rem 0 6rem;
+  background-color: var(--secondary);
+
+  .card {
+    position: relative;
+    border-radius: 30px;
+    border: 0;
+
+    .card-body {
+      padding: 5rem 3rem;
+      width: 100%;
+      max-width: $max-card-width;
+      margin: auto;
+    }
+  }
+
+  .heading {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .sub-heading {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .email {
+    color: var(--primary);
+    text-decoration: none;
+  }
+
+  .accordion {
+    margin-top: 3rem;
+  }
+
+  .accordion-item {
+    background-color: var(--secondary);
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+
+    .accordion-button,
+    .accordion-collapse {
+      border: none;
+      background-color: var(--secondary);
+      color: #000;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    .accordion-button {
+      outline: none !important;
+    }
+  }
+
+  .accordian-heading {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-right: 1rem;
+  }
+
+  .accordion-body {
+    color: rgba(0, 0, 0, 0.85);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .faq {
+    padding: 8rem 0 4rem;
+
+    .card {
+      border-radius: $card-md-border-radius;
+
+      .card-body {
+        padding: $card-md-pad-y $card-md-pad-x;
+        text-align: center;
+      }
+    }
+
+    .heading {
+      font-size: 1.7rem;
+    }
+
+    .sub-heading {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+
+    .accordion-item {
+      margin-bottom: 1rem;
+
+      .accordian-heading {
+        font-size: 1rem;
+        font-weight: 500;
+      }
+
+      .accordion-body {
+        font-size: 0.875rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .faq {
+    .card {
+      .card-body {
+        padding: $card-sm-pad-y $card-sm-pad-x;
+      }
+    }
+  }
+}
