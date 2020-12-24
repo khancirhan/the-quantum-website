@@ -25,6 +25,18 @@
       box-shadow: none;
     }
   }
+
+  .errors {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    li {
+      margin-top: 5px;
+      font-size: 0.8rem;
+      color: var(--danger);
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
