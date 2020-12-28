@@ -1,5 +1,7 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ADMIN_ROUTES } from './admin/admin.routes';
+import { AdminLayoutComponent } from './admin/components/admin-layout/admin-layout.component';
 import { AboutComponent } from './components/about/about.component';
 import { FaqComponent } from './components/faq/faq.component';
 import { GetHelpComponent } from './components/get-help/get-help.component';
@@ -20,6 +22,8 @@ const routes: Routes = [
   { path: 'place-order', component: PlaceOrderComponent },
   { path: 'order-confirmed', component: OrderConfirmedComponent },
   { path: 'privacy-policy', component: PrivacyPolicyComponent },
+  //Admin routes
+  { path: 'admin', component: AdminLayoutComponent, children: ADMIN_ROUTES },
 ];
 
 @NgModule({

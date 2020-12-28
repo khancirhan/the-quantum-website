@@ -2,6 +2,7 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +22,7 @@ import { PricingComponent } from './components/pricing/pricing.component';
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 import { TheQuantumProComponent } from './components/the-quantum-pro/the-quantum-pro.component';
 import { AnimateInViewportDirective } from './directives/animate/animate-in-viewport.directive';
+import { AdminModule } from './admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -48,6 +50,8 @@ import { AnimateInViewportDirective } from './directives/animate/animate-in-view
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
+    AdminModule,
   ],
   providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
