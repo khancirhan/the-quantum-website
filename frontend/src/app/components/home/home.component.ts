@@ -18,6 +18,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   isPlaying = true;
 
+  logos: string[] = [
+    
+  ]
+
   featureSet1 = [
     {
       icon: 'assets/images/remote_control.svg',

@@ -51,23 +51,19 @@
   .logo-wrapper {
     margin-top: 1.5rem;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     align-items: center;
-    overflow-x: scroll;
-
-    &::-webkit-scrollbar {
-      /* Safari and Chrome */
-      width: 0px;
-      background: transparent;
-    }
-
-    scrollbar-width: none; /* Firefox */
   }
 
   .logo {
     display: block;
-    height: auto;
-    padding-right: 3rem;
+    margin-right: 3rem;
+    margin-top: 2rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
