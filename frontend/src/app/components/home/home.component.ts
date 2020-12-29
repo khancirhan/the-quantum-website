@@ -13,15 +13,7 @@ import { fadeInUp, zoomIn } from '../../directives/animate/animation';
   styleUrls: ['./home.component.scss'],
   animations: [fadeInUp, zoomIn],
 })
-export class HomeComponent implements OnInit, AfterViewInit {
-  @ViewChild('video') video: ElementRef;
-
-  isPlaying = true;
-
-  logos: string[] = [
-    
-  ]
-
+export class HomeComponent implements OnInit {
   featureSet1 = [
     {
       icon: 'assets/images/remote_control.svg',
@@ -68,25 +60,16 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {}
 
-  ngAfterViewInit(): void {
-    if (this.video.nativeElement.paused) {
-      this.video.nativeElement.muted = true;
-      this.video.nativeElement.play();
-    }
-  }
-
   pauseVideo(video: HTMLVideoElement): void {
-    if (this.isPlaying && !video.paused) {
+    if (!video.paused) {
       video.pause();
-      this.isPlaying = false;
     }
   }
 
   resumeVideo(video: HTMLVideoElement): void {
-    if (!this.isPlaying && video.paused) {
+    if (video.paused) {
       video.muted = true;
       video.play();
-      this.isPlaying = true;
     }
   }
 }

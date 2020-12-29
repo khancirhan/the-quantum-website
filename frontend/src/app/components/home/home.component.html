@@ -153,13 +153,21 @@
         </div>
         <div class="flex-66">
           <div class="img-wrapper align-right">
-            <img
+            <video
+              class="radius"
+              #dashboardVideo
               @zoomIn
               [animateInViewport]="{ animationName: 'zoomIn' }"
-              class="radius"
-              src="assets/images/dashboard.svg"
-              alt="Dashboard Image"
-            />
+              #dashboardVideo
+              loop
+              autoplay
+              muted
+              (mouseover)="pauseVideo(dashboardVideo)"
+              (mouseleave)="resumeVideo(dashboardVideo)"
+            >
+              <source src="assets/videos/dashboard.mp4" type="video/mp4" />
+              Your browser does not support the video.
+            </video>
           </div>
         </div>
       </div>
@@ -211,12 +219,14 @@
         <div class="flex-66">
           <div class="img-wrapper">
             <video
+              #quantumVideo
+              @zoomIn
+              [animateInViewport]="{ animationName: 'zoomIn' }"
               loop
               autoplay
               muted
-              #video
-              (mouseover)="pauseVideo(video)"
-              (mouseleave)="resumeVideo(video)"
+              (mouseover)="pauseVideo(quantumVideo)"
+              (mouseleave)="resumeVideo(quantumVideo)"
             >
               <source
                 src="https://timelapseme.com/video/quantum.mp4"
