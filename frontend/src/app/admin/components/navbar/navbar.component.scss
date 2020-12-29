@@ -3,8 +3,14 @@
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05);
 }
 
+.navbar-brand {
+  margin-right: 80px;
+}
+
 .navbar-nav {
   .nav-link {
     color: rgba(#fff, 0.95);
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }

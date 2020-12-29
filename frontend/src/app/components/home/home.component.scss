@@ -52,18 +52,18 @@
     margin-top: 1.5rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
+  }
+
+  .logo-container {
+    display: flex;
+    justify-content: center;
   }
 
   .logo {
     display: block;
-    margin-right: 3rem;
-    margin-top: 2rem;
-
-    &:last-child {
-      margin-right: 0;
-    }
+    margin: 20px;
   }
 }
 
@@ -112,8 +112,8 @@
       font-size: 0.85rem;
     }
 
-    .logo {
-      height: 48px;
+    .logo-container {
+      width: 33.3333%;
     }
   }
 
@@ -130,5 +130,13 @@
 
   .f2 {
     padding-top: 3rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .clients {
+    .logo-container {
+      width: 50%;
+    }
   }
 }

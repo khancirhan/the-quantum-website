@@ -9,6 +9,7 @@
           <th scope="col">Email</th>
           <th scope="col">Subject</th>
           <th scope="col">Message</th>
+          <th scope="col"></th>
         </tr>
       </thead>
       <tbody>
@@ -18,7 +19,14 @@
           <td>{{ uq.firstName }}</td>
           <td>{{ uq.email }}</td>
           <td>{{ uq.subject }}</td>
-          <td>{{ uq.message }}</td>
+          <td>{{ truncateMessage(uq.message) }}</td>
+          <td>
+            <a
+              [routerLink]="['user-queries', uq._id]"
+              class="btn btn-primary btn-icon"
+              >View</a
+            >
+          </td>
         </tr>
       </tbody>
     </table>
