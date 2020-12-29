@@ -16,7 +16,7 @@
         </thead>
         <tbody>
           <tr *ngFor="let uq of userQueries; index as i">
-            <th scope="row">{{ (currentPage - 1) * limit + 1 }}</th>
+            <th scope="row">{{ i + 1 + (currentPage - 1) * limit }}</th>
             <td>{{ uq.firstName }}</td>
             <td>{{ uq.firstName }}</td>
             <td>{{ uq.email }}</td>
