@@ -3,6 +3,7 @@ import { CUSTOM_ELEMENTS_SCHEMA, ErrorHandler, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxSpinnerModule } from 'ngx-spinner';
 import { ToastrModule } from 'ngx-toastr';
 
 import { AdminModule } from './admin/admin.module';
@@ -58,6 +59,7 @@ import { HttpErrorInterceptor } from './error-handler/http-error.interceptor';
     HttpClientModule,
     AdminModule,
     ToastrModule.forRoot(),
+    NgxSpinnerModule
   ],
   providers: [
     { provide: ErrorHandler, useClass: GlobalErrorHandler },

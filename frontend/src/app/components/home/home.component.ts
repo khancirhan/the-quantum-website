@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 import { fadeInUp, zoomIn } from '../../directives/animate/animation';
 
@@ -51,7 +52,7 @@ export class HomeComponent implements OnInit {
     },
   ];
 
-  constructor() {}
+  constructor(private spinner: NgxSpinnerService) {}
 
   ngOnInit(): void {}
 
