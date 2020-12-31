@@ -11,7 +11,7 @@ import { fadeInUp, zoomIn } from '../../directives/animate/animation';
 export class HomeComponent implements OnInit {
   featureSet1 = [
     {
-      icon: 'assets/icons/test2.svg',
+      icon: 'assets/icons/remote.svg',
       title: 'Remote Control',
       info:
         'Manage your click, upload, image quality settings and more fromanywhere, anytime. The Remote Control allows you to remotely control the units regime.',
