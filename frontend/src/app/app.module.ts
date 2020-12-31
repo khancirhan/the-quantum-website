@@ -28,6 +28,7 @@ import { TheQuantumProComponent } from './components/the-quantum-pro/the-quantum
 import { AnimateInViewportDirective } from './directives/animate/animate-in-viewport.directive';
 import { GlobalErrorHandler } from './error-handler/global-error-handler';
 import { HttpErrorInterceptor } from './error-handler/http-error.interceptor';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { HttpErrorInterceptor } from './error-handler/http-error.interceptor';
     HttpClientModule,
     AdminModule,
     ToastrModule.forRoot(),
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    SharedModule,
   ],
   providers: [
     { provide: ErrorHandler, useClass: GlobalErrorHandler },

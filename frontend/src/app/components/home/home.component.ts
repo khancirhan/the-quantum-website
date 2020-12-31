@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { LightboxService } from 'src/app/shared/lightbox/service/lightbox.service';
 
 import { fadeInUp, zoomIn } from '../../directives/animate/animation';
 
@@ -52,7 +53,10 @@ export class HomeComponent implements OnInit {
     },
   ];
 
-  constructor(private spinner: NgxSpinnerService) {}
+  constructor(
+    private lightbox: LightboxService,
+    private spinner: NgxSpinnerService
+  ) {}
 
   ngOnInit(): void {}
 
@@ -67,5 +71,9 @@ export class HomeComponent implements OnInit {
       video.muted = true;
       video.play();
     }
+  }
+
+  openInLightbox(url: string): void {
+    this.lightbox.open(url);
   }
 }
