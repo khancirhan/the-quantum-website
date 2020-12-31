@@ -1,10 +1,5 @@
-import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  OnInit,
-  ViewChild,
-} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
 import { fadeInUp, zoomIn } from '../../directives/animate/animation';
 
 @Component({
@@ -16,19 +11,19 @@ import { fadeInUp, zoomIn } from '../../directives/animate/animation';
 export class HomeComponent implements OnInit {
   featureSet1 = [
     {
-      icon: 'assets/images/remote_control.svg',
+      icon: 'assets/icons/test2.svg',
       title: 'Remote Control',
       info:
         'Manage your click, upload, image quality settings and more fromanywhere, anytime. The Remote Control allows you to remotely control the units regime.',
     },
     {
-      icon: 'assets/images/solar.svg',
+      icon: 'assets/icons/solar.svg',
       title: 'Solar or Mains',
       info:
         'No separate accessories! Each of our unit can be powered by Solar or Mains. To cover the black-outs or rainy days, the unit is powered by an on-board battery pack.',
     },
     {
-      icon: 'assets/images/timelapse.svg',
+      icon: 'assets/icons/timelapse.svg',
       title: 'SmartLapse™',
       info:
         'First in segment, break your entire regime as you prefer. Add as many as 10 configs to a single day shooting regime with different click and upload timings.',

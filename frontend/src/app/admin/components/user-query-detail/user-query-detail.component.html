@@ -5,6 +5,14 @@
       <table class="table">
         <tbody>
           <tr>
+            <th>Date</th>
+            <td>{{ userQuery.createdAt | date: "MMM d, y" }}</td>
+          </tr>
+          <tr>
+            <th>Time</th>
+            <td>{{ userQuery.createdAt | date: "h:mm a, z" }}</td>
+          </tr>
+          <tr>
             <th>First Name</th>
             <td>{{ userQuery.firstName }}</td>
           </tr>

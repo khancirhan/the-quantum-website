@@ -1,0 +1,34 @@
+<ng-container>
+  <h1>Products</h1>
+  <div class="card table-responsive">
+    <div class="card-body">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Created At</th>
+            <th scope="col">Updated At</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of products; index as i">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ p.name }}</td>
+            <td>{{ p.price | currency: "":"":"1.0" }}</td>
+            <td>{{ p.createdAt | date: "MMM d, y" }}</td>
+            <td>{{ p.updatedAt | date: "MMM d, y" }}</td>
+            <td>
+              <a [routerLink]="p._id" class="btn btn-primary btn-icon">Edit</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <a class="btn btn-primary btn-float" routerLink="add">
+    <i class="bi bi-plus"></i>
+  </a>
+</ng-container>

@@ -20,10 +20,9 @@ export class UserQueryService {
     params = params.append('page', page.toString());
     params = params.append('limit', limit.toString());
 
-    return this.http.get<{ items: UserQuery[]; totalItems: number }>(
-      `${this.url}`,
-      { params }
-    );
+    return this.http.get<{ items: UserQuery[]; totalItems: number }>(this.url, {
+      params,
+    });
   }
 
   create(userQuery: UserQuery): Observable<UserQuery> {

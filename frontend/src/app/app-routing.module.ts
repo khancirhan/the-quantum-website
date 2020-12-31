@@ -7,6 +7,7 @@ import { FaqComponent } from './components/faq/faq.component';
 import { GetHelpComponent } from './components/get-help/get-help.component';
 import { HomeComponent } from './components/home/home.component';
 import { OrderConfirmedComponent } from './components/order-confirmed/order-confirmed.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { PlaceOrderComponent } from './components/place-order/place-order.component';
 import { PricingComponent } from './components/pricing/pricing.component';
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
@@ -19,11 +20,14 @@ const routes: Routes = [
   { path: 'faqs', component: FaqComponent },
   { path: 'get-help', component: GetHelpComponent },
   { path: 'pricing', component: PricingComponent },
-  { path: 'place-order', component: PlaceOrderComponent },
+  { path: 'place-order/:productId', component: PlaceOrderComponent },
   { path: 'order-confirmed', component: OrderConfirmedComponent },
   { path: 'privacy-policy', component: PrivacyPolicyComponent },
   //Admin routes
   { path: 'admin', component: AdminLayoutComponent, children: ADMIN_ROUTES },
+  // Wildcard route
+  { path: '**', redirectTo: '/page-not-found' },
+  { path: 'page-not-found', component: PageNotFoundComponent },
 ];
 
 @NgModule({

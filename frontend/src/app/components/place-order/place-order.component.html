@@ -10,13 +10,20 @@
     <div class="container">
       <div class="card">
         <div class="card-body">
-          <div class="flex-wrapper">
+          <div class="flex-wrapper" *ngIf="product">
             <h2 class="heading">
-              Place Order - TheQuantum<span class="postfix-light">AIR</span>
+              <ng-container *ngIf="nameContains('air')">
+                Place Order - TheQuantum<span class="postfix-light">AIR</span>
+              </ng-container>
+              <ng-container *ngIf="nameContains('pro')">
+                Place Order - TheQuantum<span class="postfix-bold">Pro</span>
+              </ng-container>
             </h2>
             <div class="pay">
               <h2 class="heading">You Pay</h2>
-              <h5 class="sub-heading">US$ 999</h5>
+              <h5 class="sub-heading">
+                US$ {{ product.price | currency: "":"":"1.0" }}
+              </h5>
             </div>
           </div>
           <!-- Form -->

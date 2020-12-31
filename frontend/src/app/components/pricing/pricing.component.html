@@ -20,7 +20,9 @@
                 controller.
               </h6>
 
-              <h1 class="price">US$ 999</h1>
+              <h1 class="price">
+                US$ {{ tqAir.price | currency: "":"":"1.0" }}
+              </h1>
               <h6 class="sub-heading">Includes 1 Year of Cloud Subscription</h6>
 
               <ul class="product-feature-list">
@@ -46,7 +48,9 @@
                 onboard controller.
               </h6>
 
-              <h1 class="price">US$ 2,499</h1>
+              <h1 class="price">
+                US$ {{ tqPro.price | currency: "":"":"1.0" }}
+              </h1>
               <h6 class="sub-heading">
                 Includes 1 Year of Cloud Subscription & Free Shipping
               </h6>
@@ -59,7 +63,11 @@
                 <li class="feature-item">1 Minute Click Frequency</li>
               </ul>
 
-              <button class="btn btn-primary btn-pricing">Buy</button>
+              <a
+                class="btn btn-primary btn-pricing"
+                [routerLink]="['/place-order', tqPro._id]"
+                >Buy</a
+              >
 
               <div class="extra">Usually ships the same day</div>
             </div>

@@ -5,4 +5,10 @@ export class UserQuery {
   email: string;
   subject: string;
   message: string;
+  createdAt: Date;
+  updatedAt: Date;
+
+  constructor(init?: Partial<UserQuery>) {
+    Object.assign(this, init);
+  }
 }

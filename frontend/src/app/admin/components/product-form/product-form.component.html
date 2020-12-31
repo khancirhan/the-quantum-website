@@ -1,0 +1,93 @@
+<ng-container>
+  <div class="card">
+    <div class="card-body">
+      <form class="form" #productForm="ngForm" (ngSubmit)="onSubmit()">
+        <!-- Name -->
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            id="name"
+            class="form-control"
+            name="name"
+            [(ngModel)]="product.name"
+            #name="ngModel"
+            placeholder="Enter product name"
+            required
+          />
+          <ul class="errors" *ngIf="name.touched && name.invalid">
+            <li *ngIf="name.errors.required">This Field is required.</li>
+          </ul>
+        </div>
+
+        <!-- Price -->
+        <div class="form-group">
+          <label for="name">Price</label>
+          <input
+            id="name"
+            class="form-control"
+            name="price"
+            [(ngModel)]="product.price"
+            #price="ngModel"
+            placeholder="Enter product price"
+            required
+          />
+          <ul class="errors" *ngIf="price.touched && price.invalid">
+            <li *ngIf="price.errors.required">This Field is required.</li>
+          </ul>
+        </div>
+
+        <button
+          class="btn btn-primary btn-submit"
+          [disabled]="productForm.invalid"
+        >
+          Save
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <button
+    class="btn btn-danger btn-float"
+    *ngIf="id"
+    data-bs-toggle="modal"
+    data-bs-target="#deleteModal"
+  >
+    <i class="bi bi-trash"></i>
+  </button>
+
+  <div class="modal" tabindex="-1" id="deleteModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Delete Product</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete this product from the database?
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            No
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-dismiss="modal"
+            (click)="deleteProduct()"
+          >
+            Yes
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
