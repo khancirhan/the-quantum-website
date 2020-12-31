@@ -32,19 +32,19 @@ export class HomeComponent implements OnInit {
 
   featureSet2 = [
     {
-      icon: 'assets/images/lte.svg',
+      icon: 'assets/icons/lte.svg',
       title: 'LTE Connectivity',
       info:
         'For the remotest construction sites with no fixed line internet, the unit is capable of running on a wide-band of Mobile LTE networks. Even when the network drops, the unit is still operational.',
     },
     {
-      icon: 'assets/images/cloud.svg',
+      icon: 'assets/icons/cloud.svg',
       title: 'Cloud Reporting',
       info:
         ' Sitting miles away from your contruction site? Get access to the unit logs, battery health, signal strength and much more from the click of a single button.',
     },
     {
-      icon: 'assets/images/customized.svg',
+      icon: 'assets/icons/customised.svg',
       title: 'Customised',
       info:
         'Don’t see what you have always wanted? We strive for continous client and user satisfaction. Get in touch with us if you want acustomised solution designed around TheQuantum.',
