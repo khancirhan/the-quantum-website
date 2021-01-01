@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { UserQuery } from 'src/app/models/user-query';
-import { UserQueryService } from 'src/app/services/user-query.service';
+import { UserQuery } from 'src/app/shared/models/user-query';
+import { UserQueryService } from 'src/app/shared/services/user-query.service';
 import { truncate } from '../../utils/common';
 
 @Component({

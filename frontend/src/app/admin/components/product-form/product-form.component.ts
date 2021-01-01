@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { NotFoundError } from 'src/app/error-handler/errors/not-found-error';
-import { Product } from 'src/app/models/product';
+import { Product } from 'src/app/shared/models/product';
 
-import { ProductService } from '../../../services/product.service';
+import { ProductService } from '../../../shared/services/product.service';
 
 @Component({
   selector: 'app-product-form',

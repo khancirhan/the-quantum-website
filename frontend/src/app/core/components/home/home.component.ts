@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NgxSpinnerService } from 'ngx-spinner';
+import { fadeInUp, zoomIn } from 'src/app/shared/directives/animate/animation';
 import { LightboxService } from 'src/app/shared/lightbox/service/lightbox.service';
-
-import { fadeInUp, zoomIn } from '../../directives/animate/animation';
 
 @Component({
   selector: 'app-home',
@@ -53,10 +51,7 @@ export class HomeComponent implements OnInit {
     },
   ];
 
-  constructor(
-    private lightbox: LightboxService,
-    private spinner: NgxSpinnerService
-  ) {}
+  constructor(private lightbox: LightboxService) {}
 
   ngOnInit(): void {}
 

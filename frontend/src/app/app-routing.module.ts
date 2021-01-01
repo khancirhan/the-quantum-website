@@ -1,28 +1,15 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { ADMIN_ROUTES } from './admin/admin.routes';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+
 import { AdminLayoutComponent } from './admin/components/admin-layout/admin-layout.component';
-import { AboutComponent } from './components/about/about.component';
-import { FaqComponent } from './components/faq/faq.component';
-import { GetHelpComponent } from './components/get-help/get-help.component';
-import { HomeComponent } from './components/home/home.component';
-import { OrderConfirmedComponent } from './components/order-confirmed/order-confirmed.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { PlaceOrderComponent } from './components/place-order/place-order.component';
-import { PricingComponent } from './components/pricing/pricing.component';
-import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
-import { TheQuantumProComponent } from './components/the-quantum-pro/the-quantum-pro.component';
+import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
+
+import { ADMIN_ROUTES } from './admin/admin.routes';
+import { CORE_ROUTES } from './core/core.routes';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent, pathMatch: 'full' },
-  { path: 'about-us', component: AboutComponent },
-  { path: 'the-quantum-pro', component: TheQuantumProComponent },
-  { path: 'faqs', component: FaqComponent },
-  { path: 'get-help', component: GetHelpComponent },
-  { path: 'pricing', component: PricingComponent },
-  { path: 'place-order/:productId', component: PlaceOrderComponent },
-  { path: 'order-confirmed', component: OrderConfirmedComponent },
-  { path: 'privacy-policy', component: PrivacyPolicyComponent },
+  // Core routes
+  { path: '', children: CORE_ROUTES },
   //Admin routes
   { path: 'admin', component: AdminLayoutComponent, children: ADMIN_ROUTES },
   // Wildcard route

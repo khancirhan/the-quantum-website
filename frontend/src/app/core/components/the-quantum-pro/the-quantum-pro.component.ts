@@ -5,7 +5,7 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
-import { fadeInUp, zoomIn } from 'src/app/directives/animate/animation';
+import { fadeInUp, zoomIn } from 'src/app/shared/directives/animate/animation';
 
 @Component({
   selector: 'app-the-quantum-pro',
@@ -36,7 +36,7 @@ export class TheQuantumProComponent implements OnInit {
 
   navLinks = [
     {
-      text: 'The Housing',
+      text: 'TheHousing',
       elementId: 'housing',
     },
     {

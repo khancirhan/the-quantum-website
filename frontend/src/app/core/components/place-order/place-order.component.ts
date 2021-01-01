@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Product, tqAir, tqPro } from 'src/app/models/product';
-import { ProductService } from 'src/app/services/product.service';
-import { countries } from 'src/app/utils/countries';
+import { Product, tqAir, tqPro } from 'src/app/shared/models/product';
+import { ProductService } from 'src/app/shared/services/product.service';
+import { countries } from 'src/app/shared/utils/countries';
 
 @Component({
   selector: 'app-place-order',

@@ -12,11 +12,11 @@ export class LightboxService {
 
   constructor() {}
 
-  open(url: string): void {
-    this.lightboxSubject.next({ isOpen: true, url: url });
+  open(src: string): void {
+    this.lightboxSubject.next({ isOpen: true, src: src });
   }
 
-  close(url: string): void {
-    this.lightboxSubject.next({ isOpen: false, url: url });
+  close(src: string): void {
+    this.lightboxSubject.next({ isOpen: false, src: src });
   }
 }

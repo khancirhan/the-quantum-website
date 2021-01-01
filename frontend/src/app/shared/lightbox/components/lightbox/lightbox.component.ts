@@ -1,12 +1,11 @@
 import {
   trigger,
-  state,
   style,
   transition,
   animate,
   keyframes,
 } from '@angular/animations';
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Lightbox } from '../../models/lightbox';
 import { LightboxService } from '../../service/lightbox.service';
@@ -20,7 +19,7 @@ import { LightboxService } from '../../service/lightbox.service';
       transition(
         'void  => *',
         animate(
-          '0.3s ease-out',
+          '0.6s ease-out',
           keyframes([
             style({
               offset: 0,
@@ -36,7 +35,7 @@ import { LightboxService } from '../../service/lightbox.service';
 export class LightboxComponent implements OnInit {
   private subscription: Subscription;
   isOpen = false;
-  url: string;
+  src: string;
 
   constructor(private lightboxService: LightboxService) {}
 
@@ -44,7 +43,7 @@ export class LightboxComponent implements OnInit {
     this.subscription = this.lightboxService.lightbox$.subscribe(
       (lightbox: Lightbox) => {
         this.isOpen = lightbox.isOpen;
-        this.url = lightbox.url;
+        this.src = lightbox.src;
       }
     );
   }

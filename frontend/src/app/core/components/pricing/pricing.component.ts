@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Product, tqAir, tqPro } from 'src/app/models/product';
-import { ProductService } from 'src/app/services/product.service';
+import { Product, tqAir, tqPro } from 'src/app/shared/models/product';
+import { ProductService } from 'src/app/shared/services/product.service';
 
 @Component({
   selector: 'app-pricing',

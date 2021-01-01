@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { fadeInUp, zoomIn } from 'src/app/directives/animate/animation';
+import { fadeInUp, zoomIn } from 'src/app/shared/directives/animate/animation';
 
 @Component({
   selector: 'app-feature',
