@@ -127,6 +127,11 @@
   text-align: center;
 }
 
+.image {
+  box-shadow: none !important;
+  border: none;
+}
+
 @media screen and (max-width: 991px) {
   .navigation {
     top: 66px;
