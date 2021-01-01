@@ -154,7 +154,6 @@
         <div class="flex-66">
           <div class="img-wrapper align-right">
             <video
-              class="radius"
               #dashboardVideo
               @zoomIn
               [animateInViewport]="{ animationName: 'zoomIn' }"
@@ -288,7 +287,7 @@
         <div class="flex-66">
           <div class="img-wrapper align-right">
             <img
-              class="video radius pointer"
+              class="video clickable"
               src="assets/images/works.png"
               alt="Video"
               (click)="openInLightbox('assets/images/works.png')"
