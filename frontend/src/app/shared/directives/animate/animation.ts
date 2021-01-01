@@ -44,7 +44,7 @@ export const zoomIn = trigger('zoomIn', [
       params: {
         duration: '1.2s',
         delay: '0.2s',
-        easing: 'ease-out',
+        easing: 'cubic-bezier(.19,1,.22,1)',
       },
     }
   ),

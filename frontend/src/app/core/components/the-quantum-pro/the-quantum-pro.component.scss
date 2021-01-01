@@ -108,17 +108,16 @@
 .flexible {
   .recommend {
     display: flex;
-    justify-content: space-between;
     align-items: center;
 
     h6 {
       font-weight: 400;
       margin-bottom: 0;
-      line-height: 0;
+      margin-right: 16px;
     }
 
     img {
-      width: 100px;
+      margin-right: 12px;
     }
   }
 }
@@ -127,9 +126,15 @@
   text-align: center;
 }
 
-.image {
-  box-shadow: none !important;
-  border: none;
+.img-wrapper {
+  img {
+    box-shadow: none !important;
+    border: none;
+  }
+}
+
+.w-65 {
+  width: 65%;
 }
 
 @media screen and (max-width: 991px) {
