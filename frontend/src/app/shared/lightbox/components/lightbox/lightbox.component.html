@@ -1,7 +1,11 @@
-<div class="lightbox-wrapper" *ngIf="isOpen">
+<div class="lightbox-wrapper" *ngIf="isOpen" @fadeIn>
   <div class="lightbox">
+    <div class="close-bar">
+      <span class="cross-icon" (click)="close()">
+        <i class="bi bi-x"></i>
+      </span>
+    </div>
     <div class="main-wrapper">
-      <span class="cross-btn" (click)="close()"> &times; </span>
       <iframe
         src="https://player.vimeo.com/video/487973821"
         frameborder="0"
