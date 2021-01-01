@@ -35,14 +35,13 @@ export const zoomIn = trigger('zoomIn', [
     animate(
       '{{ duration }} {{ delay }} {{ easing }}',
       keyframes([
-        style({ offset: 0, opacity: 0, transform: 'scale3d(0.9, 0.9, 0.9)' }),
-        style({ offset: 0.5, opacity: 0.6, transform: 'scale3d(1, 1, 1)' }),
-        style({ offset: 1, opacity: 1 }),
+        style({ offset: 0, opacity: 0, transform: 'scale3d(0.8, 0.8, 0.8)' }),
+        style({ offset: 1, opacity: 1, transform: 'scale3d(1, 1, 1)' }),
       ])
     ),
     {
       params: {
-        duration: '1.2s',
+        duration: '2s',
         delay: '0.2s',
         easing: 'cubic-bezier(.19,1,.22,1)',
       },

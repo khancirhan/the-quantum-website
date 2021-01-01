@@ -80,8 +80,7 @@ export class TheQuantumProComponent implements OnInit {
 
   @HostListener('window:scroll', ['$event'])
   checkOffsetTop() {
-    let pageYOffset =
-      window.pageYOffset + this.navEl.nativeElement.offsetHeight;
+    let pageYOffset = window.pageYOffset + window.innerHeight - 400;
 
     // For lg, md and sm screens, add top navbar height as well
     if (window.innerWidth <= 991) pageYOffset += 66;
