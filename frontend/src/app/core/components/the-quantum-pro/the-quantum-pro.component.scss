@@ -40,10 +40,6 @@
   background-color: #fff;
   z-index: 10;
 
-  nav {
-    padding-top: 0.5rem;
-  }
-
   .nav-list {
     list-style: none;
     padding: 0;
@@ -99,8 +95,8 @@
       }
     }
 
-    &.active .text {
-      color: var(--primary);
+    &.active {
+      border-top: 3px solid var(--primary);
     }
   }
 }
