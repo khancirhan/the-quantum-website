@@ -1,6 +1,6 @@
 <ng-container>
-  <!-- <h1>Orders</h1>
-  <div class="card table-responsive">
+  <h1>Orders</h1>
+  <!-- <div class="card table-responsive">
     <div class="card-body">
       <table class="table table-striped">
         <thead>
@@ -27,7 +27,9 @@
             <td>{{ o.contact }}</td>
             <td>{{ o.email }}</td>
             <td>{{ o.country }}</td>
-            <td>{{ truncateMessage(o.message) }}</td>
+            <td>{{ truncateMessage(o.shippingAddress) }}</td>
+            <td>{{ o.product }}</td>
+            <td>{{ o.amount }}</td>
             <td>
               <a [routerLink]="o._id" class="btn btn-primary btn-icon">View</a>
             </td>
