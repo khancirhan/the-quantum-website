@@ -51,15 +51,19 @@
 
     .feature-item {
       display: inline-flex;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
       font-size: 1.1rem;
       font-weight: 300;
       line-height: 1.375rem;
+      align-items: center;
 
       &::before {
-        content: "*";
+        content: "";
         margin-right: 1rem;
-        color: var(--primary);
+        width: 34px;
+        height: 34px;
+        background-image: url(../../../../assets/icons/tick-outline.svg);
+        background-repeat: no-repeat;
       }
     }
   }
@@ -181,14 +185,20 @@
         padding: 0;
 
         .feature-item {
+          display: flex;
+          align-items: center;
           font-size: 0.9rem;
           font-weight: 600;
           margin-bottom: 0.6rem;
 
           &::before {
-            content: ">";
+            content: "";
             margin-right: 1rem;
-            color: var(--primary);
+            width: 16px;
+            height: 12px;
+            background-image: url(../../../../assets/icons/tick.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
           }
         }
       }
