@@ -11,19 +11,23 @@
       <div class="card">
         <div class="card-body">
           <div class="flex-wrapper" *ngIf="product">
-            <h2 class="heading">
-              <ng-container *ngIf="nameContains('air')">
-                Place Order - TheQuantum<span class="postfix-light">AIR</span>
-              </ng-container>
-              <ng-container *ngIf="nameContains('pro')">
-                Place Order - TheQuantum<span class="postfix-bold">Pro</span>
-              </ng-container>
-            </h2>
+            <div class="product">
+              <h5 class="title">Placing order for</h5>
+              <h2 class="heading">
+                <ng-container *ngIf="nameContains('air')">
+                  TheQuantum<span class="postfix-light">AIR</span>
+                </ng-container>
+                <ng-container *ngIf="nameContains('pro')">
+                  TheQuantum<span class="postfix-bold">Pro</span>
+                </ng-container>
+              </h2>
+            </div>
+
             <div class="pay">
-              <h2 class="heading">You Pay</h2>
-              <h5 class="sub-heading">
+              <h5 class="title">You Pay</h5>
+              <h2 class="heading">
                 US$ {{ product.price | currency: "":"":"1.0" }}
-              </h5>
+              </h2>
             </div>
           </div>
           <!-- Form -->
@@ -159,8 +163,11 @@
               <div class="right">
                 <h6>Pay using</h6>
                 <div class="logos">
-                  <img src="assets/images/emaar.png" alt="" />
-                  <img src="assets/images/emaar.png" alt="" />
+                  <img
+                    src="assets/logos/mastercard-logo.svg"
+                    alt="Mastercard Logo"
+                  />
+                  <img src="assets/logos/visa-logo.svg" alt="Visa Logo" />
                 </div>
               </div>
             </div>

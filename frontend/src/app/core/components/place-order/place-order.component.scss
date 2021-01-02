@@ -21,20 +21,23 @@
   .flex-wrapper {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 2rem;
   }
 
-  .heading {
-    font-size: 2rem;
-    font-weight: 700;
+  .pay {
+    text-align: right;
   }
 
-  .sub-heading {
+  .title {
     margin-top: 0.5rem;
     font-size: 1.3rem;
     font-weight: 300;
     line-height: 32px;
-    margin-bottom: 1.75rem;
-    text-align: right;
+  }
+
+  .heading {
+    font-size: 2rem;
+    font-weight: 600;
   }
 
   .email {
@@ -64,9 +67,16 @@
   }
 
   .right {
-    .logos img {
-      width: 160px;
-      height: auto;
+    .logos {
+      display: inline-flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 200px;
+
+      img {
+        width: 80px;
+        height: auto;
+      }
     }
   }
 }
@@ -88,18 +98,22 @@
       flex-direction: column;
     }
 
+    .pay {
+      text-align: center;
+    }
+
     .left {
       margin-bottom: 1.5rem;
     }
 
-    .heading {
-      font-size: 1.7rem;
-    }
-
-    .sub-heading {
+    .title {
       font-size: 1rem;
       line-height: 1.5rem;
       text-align: center;
+    }
+
+    .heading {
+      font-size: 1.7rem;
     }
   }
 }

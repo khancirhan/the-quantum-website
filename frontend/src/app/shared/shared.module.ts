@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
+import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { ToastrModule } from 'ngx-toastr';
 
@@ -28,6 +29,7 @@ const modules = [
   ToastrModule.forRoot(),
   NgxSpinnerModule,
   RouterModule,
+  NgxIntlTelInputModule,
 ];
 
 @NgModule({

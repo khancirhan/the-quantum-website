@@ -8,10 +8,11 @@ import { CoreModule } from './core/core.module';
 import { GlobalErrorHandler } from './error-handler/global-error-handler';
 import { HttpErrorInterceptor } from './error-handler/http-error.interceptor';
 import { SharedModule } from './shared/shared.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [CoreModule, AdminModule, AppRoutingModule, SharedModule],
+  imports: [CoreModule, AdminModule, AppRoutingModule, SharedModule, BrowserAnimationsModule],
   providers: [
     { provide: ErrorHandler, useClass: GlobalErrorHandler },
     {

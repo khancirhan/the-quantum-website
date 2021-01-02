@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="258.3" height="83.4" viewBox="0 0 258.3 83.4">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <clipPath id="clip-path" transform="translate(0 0)">
+      <path class="cls-1" d="M76.1,1.5,54.4,56.4,45.6,9.7A9.7,9.7,0,0,0,36,1.5H.5L0,3.8C7.3,5.4,15.6,8,20.6,10.7c3.1,1.6,3.9,3.1,4.9,7.1L42.2,82.1h22L98.1,1.5Zm30.9,0L89.7,82.1h20.9L127.9,1.5ZM226.7,23.3,233,53.6H215.7ZM223.6,1.5a9.5,9.5,0,0,0-8.9,5.9L183.4,82.1h21.9l4.4-12h26.7l2.6,12h19.3L241.4,1.5Zm-90,25.2c-.2,11.6,10.3,18.1,18.2,21.9s10.9,6.5,10.9,10c-.1,5.5-6.5,7.8-12.5,7.9-10.5.2-16.6-2.8-21.5-5.1L125,79.1c4.8,2.3,13.8,4.2,23.2,4.3,21.9,0,36.2-10.8,36.3-27.6.1-21.3-29.4-22.5-29.2-32,0-2.9,2.8-5.9,8.8-6.7a39.4,39.4,0,0,1,20.6,3.6l3.7-17.1A57.1,57.1,0,0,0,168.8,0c-20.6,0-35.1,11-35.2,26.7"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="-619.2" y1="403.75" x2="-617.16" y2="403.75" gradientTransform="matrix(126.55, 0, 0, -126.55, 78356.73, 51133.96)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#26235c"/>
+      <stop offset="1" stop-color="#0a509f"/>
+    </linearGradient>
+  </defs>
+  <title>Asset 2</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g class="cls-2">
+        <rect class="cls-3" width="258.3" height="83.41"/>
+      </g>
+    </g>
+  </g>
+</svg>

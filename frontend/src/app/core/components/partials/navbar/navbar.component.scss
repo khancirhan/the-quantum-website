@@ -92,6 +92,7 @@
 
   .dropdown-toggle {
     font-weight: 600;
+    padding-right: 0;
 
     &::after {
       border: 0;
@@ -112,7 +113,7 @@
     font-weight: 600;
     color: var(--primary);
     cursor: pointer;
-    padding-right: 0.5rem;
+    padding: 8px;
   }
 
   .btn-buynow {
