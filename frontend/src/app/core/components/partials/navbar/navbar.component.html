@@ -1,5 +1,6 @@
 <nav [class]="'navbar navbar-expand-lg ' + classes[background]">
   <div class="container">
+    <!-- Menu on mobile screens -->
     <div class="hamburger-menu">
       <button
         class="navbar-toggler"
@@ -17,6 +18,7 @@
       </button>
     </div>
 
+    <!-- Logo -->
     <a class="navbar-icon" routerLink="/">
       <img
         class="logo-lg d-none d-lg-block"
@@ -30,10 +32,13 @@
       />
     </a>
 
+    <!-- Sign In button on mobile screens -->
     <a class="link-primary d-sm-block d-lg-none">Sign In</a>
 
+    <!-- Navbar menu left -->
     <div class="collapse navbar-collapse" [class.show]="isOpen">
       <ul class="navbar-nav nav-menu">
+        <!-- Link 1 -->
         <li class="nav-item">
           <a
             class="nav-link"
@@ -43,6 +48,7 @@
           >
         </li>
 
+        <!-- Link 2 -->
         <li class="nav-item">
           <a
             class="nav-link"
@@ -52,24 +58,56 @@
           >
         </li>
 
+        <!-- Link 3 -->
         <li class="nav-item">
           <a class="nav-link" routerLink="/faqs" routerLinkActive="active"
             >Resources</a
           >
         </li>
 
+        <!-- Link 4 -->
         <li class="nav-item">
           <a class="nav-link" routerLink="/pricing" routerLinkActive="active"
             >Pricing</a
           >
         </li>
       </ul>
+
+      <!-- Navbar menu right -->
       <ul class="navbar-nav nav-buttons">
+        <!-- Link 1 -->
         <li class="nav-item d-none d-lg-block">
-          <a class="btn btn-signin">Sign In</a>
+          <a class="btn-signin">Sign In</a>
         </li>
-        <li class="nav-item">
+
+        <!-- Link 2 -->
+        <li class="nav-item" *ngIf="path != '/pricing'">
           <a class="btn btn-buynow" routerLink="/pricing">Buy Now</a>
+        </li>
+
+        <!-- Link 3 -->
+        <li class="nav-item dropdown" *ngIf="path == '/pricing'">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            US$
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="navbarDropdown"
+          >
+            <li>
+              <a class="dropdown-item" (click)="setCurrency('US$')">US$</a>
+            </li>
+            <li>
+              <a class="dropdown-item" (click)="setCurrency('INR')">INR</a>
+            </li>
+          </ul>
         </li>
       </ul>
     </div>

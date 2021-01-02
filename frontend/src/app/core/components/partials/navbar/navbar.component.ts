@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -18,7 +19,12 @@ export class NavbarComponent implements OnInit {
 
   navbarLogo = 'assets/images/logo_dark.svg';
 
-  constructor() {}
+  path: string;
+
+  constructor(private router: Router) {
+    this.path = this.router.url;
+    console.log(this.path);
+  }
 
   ngOnInit(): void {
     if (this.background == 'secondary' || this.background == 'white')
@@ -26,5 +32,9 @@ export class NavbarComponent implements OnInit {
     else if (this.background == 'primary')
       this.navbarLogo = 'assets/images/logo_primary.svg';
     else this.navbarLogo = 'assets/images/logo_dark.svg';
+  }
+
+  setCurrency(currency: string) {
+    console.log(currency);
   }
 }
