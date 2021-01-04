@@ -194,3 +194,25 @@ select:invalid {
     padding: 3rem 0 2rem;
   }
 }
+
+.intl-tel-input {
+  display: block !important;
+  width: 100%;
+  background-color: green;
+}
+
+.intl-tel-input .country-list {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  box-shadow: none;
+  border-color: #c7cace;
+  font-size: 14px;
+  margin-left: 0;
+  margin-top: -1px;
+  width: 100%;
+}
+
+.flag-container.open + input {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}

@@ -23,7 +23,6 @@ export class NavbarComponent implements OnInit {
 
   constructor(private router: Router) {
     this.path = this.router.url;
-    console.log(this.path);
   }
 
   ngOnInit(): void {
