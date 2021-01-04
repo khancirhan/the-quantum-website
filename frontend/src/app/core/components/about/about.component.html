@@ -95,40 +95,113 @@
       <h2 class="heading">Few of TheQuantum documentations</h2>
       <div class="gallery">
         <div class="row gx-3">
-          <div class="col-md-4 img-col">
-            <img
-              class="gallery-img"
-              src="assets/images/gallery-img-1.jpg"
-              alt="Gallery Image"
-            />
+          <div class="col-md-4">
+            <div
+              class="img-col"
+              (mouseover)="showPlayBtn(p1)"
+              (mouseleave)="hidePlayBtn(p1)"
+            >
+              <img
+                class="gallery-img"
+                src="assets/images/gallery-img-1.jpg"
+                alt="Gallery Image"
+              />
+              <div
+                #p1
+                class="play-btn"
+                (click)="
+                  openInLightbox(
+                    'https://player.vimeo.com/video/220619893?&autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=0'
+                  )
+                "
+              >
+                <i class="bi bi-play-fill"></i>
+              </div>
+            </div>
           </div>
-          <div class="col-md-8 img-col">
-            <img
-              class="gallery-img"
-              src="assets/images/gallery-img-2.jpg"
-              alt="Gallery Image"
-            />
+          <div class="col-md-8">
+            <div
+              class="img-col"
+              (mouseover)="showPlayBtn(p2)"
+              (mouseleave)="hidePlayBtn(p2)"
+            >
+              <img
+                class="gallery-img"
+                src="assets/images/gallery-img-2.jpg"
+                alt="Gallery Image"
+              />
+              <div #p2 class="play-btn">
+                <i class="bi bi-play-fill"></i>
+              </div>
+            </div>
           </div>
-          <div class="col-md-4 img-col">
-            <img
-              class="gallery-img"
-              src="assets/images/gallery-img-3.jpg"
-              alt="Gallery Image"
-            />
+          <div class="col-md-4">
+            <div
+              class="img-col"
+              (mouseover)="showPlayBtn(p3)"
+              (mouseleave)="hidePlayBtn(p3)"
+            >
+              <img
+                class="gallery-img"
+                src="assets/images/gallery-img-3.jpg"
+                alt="Gallery Image"
+              />
+              <div
+                #p3
+                class="play-btn"
+                (click)="
+                  openInLightbox('https://www.youtube.com/embed/_3Au5wfPsEI')
+                "
+              >
+                <i class="bi bi-play-fill"></i>
+              </div>
+            </div>
           </div>
-          <div class="col-md-4 img-col">
-            <img
-              class="gallery-img"
-              src="assets/images/gallery-img-4.jpg"
-              alt="Gallery Image"
-            />
+          <div class="col-md-4">
+            <div
+              class="img-col"
+              (mouseover)="showPlayBtn(p4)"
+              (mouseleave)="hidePlayBtn(p4)"
+            >
+              <img
+                class="gallery-img"
+                src="assets/images/gallery-img-4.jpg"
+                alt="Gallery Image"
+              />
+              <div
+                #p4
+                class="play-btn"
+                (click)="
+                  openInLightbox('https://www.youtube.com/embed/_3Au5wfPsEI')
+                "
+              >
+                <i class="bi bi-play-fill"></i>
+              </div>
+            </div>
           </div>
-          <div class="col-md-4 img-col">
-            <img
-              class="gallery-img"
-              src="assets/images/gallery-img-5.jpg"
-              alt="Gallery Image"
-            />
+          <div class="col-md-4">
+            <div
+              class="img-col"
+              (mouseover)="showPlayBtn(p5)"
+              (mouseleave)="hidePlayBtn(p5)"
+            >
+              <img
+                class="gallery-img"
+                src="assets/images/gallery-img-5.jpg"
+                alt="Gallery Image"
+              />
+              <div
+                #p5
+                class="play-btn"
+                (click)="
+                  openInLightbox(
+                    'https://player.vimeo.com/video/230447974?&autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=0'
+                  )
+                "
+              >
+                <i class="bi bi-play-fill"></i>
+              </div>
+            </div>
           </div>
         </div>
       </div>

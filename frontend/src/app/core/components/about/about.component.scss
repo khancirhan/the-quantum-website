@@ -102,14 +102,47 @@
     margin-top: 4rem;
 
     .img-col {
+      position: relative;
       display: inline-flex;
       margin-bottom: 1rem;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
     }
 
     .gallery-img {
+      display: flex;
       width: 100%;
       height: 340px;
       object-fit: cover;
+      transition: all 0.8s ease;
+
+      &:hover {
+        transform: scale(1.25);
+      }
+    }
+
+    .play-btn {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.8rem;
+      color: #fff;
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+      background-color: rgba(23, 22, 26, 0.95);
+      opacity: 0;
+      transition: opacity 0.3s ease-out;
+
+      &.visible {
+        opacity: 1;
+      }
+
+      &:hover {
+        box-shadow: 1px 1px 4px rgba(#000, 0.55);
+      }
     }
   }
 }

@@ -67,10 +67,9 @@
                   required
                 /> -->
                 <ngx-intl-tel-input
-                  cssClass="form-control"
-                  [enablePlaceholder]="true"
                   [searchCountryFlag]="true"
-                  placeholder="Enter mobile number"
+                  [separateDialCode]="true"
+                  customPlaceholder="Enter mobile number"
                   name="phone"
                   ngModel
                   #phoneModel="ngModel"

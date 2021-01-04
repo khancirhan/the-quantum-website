@@ -195,24 +195,26 @@ select:invalid {
   }
 }
 
-.intl-tel-input {
-  display: block !important;
-  width: 100%;
-  background-color: green;
-}
+// ngx-intl-tel-input style override
+.iti {
+  display: block;
+  font-size: 1.05rem;
+  border-radius: 6px;
 
-.intl-tel-input .country-list {
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  box-shadow: none;
-  border-color: #c7cace;
-  font-size: 14px;
-  margin-left: 0;
-  margin-top: -1px;
-  width: 100%;
-}
+  .iti__flag-container {
+    padding: 0.625rem 0.5rem;
+  }
 
-.flag-container.open + input {
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+  input[type="tel"] {
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.45);
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
 }
