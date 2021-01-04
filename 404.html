@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+  <script>
+    function initFreshChat() {
+      window.fcWidget.init({
+        token: "5a51177e-abf1-4ffb-9390-0713f4a25789",
+        host: "https://wchat.in.freshchat.com",
+      });
+    }
+    function initialize(i, t) {
+      var e;
+      i.getElementById(t)
+        ? initFreshChat()
+        : (((e = i.createElement("script")).id = t),
+          (e.async = !0),
+          (e.src = "https://wchat.in.freshchat.com/js/widget.js"),
+          (e.onload = initFreshChat),
+          i.head.appendChild(e));
+    }
+    function initiateCall() {
+      initialize(document, "freshchat-js-sdk");
+    }
+    window.addEventListener
+      ? window.addEventListener("load", initiateCall, !1)
+      : window.attachEvent("load", initiateCall, !1);
+  </script>
   <head>
     <meta charset="utf-8"/>
     <title>TheQuantum</title>
     <base href="/the-quantum-website/"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="icon" type="image/x-icon" href="assets/favicon.png"/>
-  <link rel="stylesheet" href="styles.06a6acd027f4c533d76b.css"></head>
+  <link rel="stylesheet" href="styles.c3743dfac5ed876e0bf3.css"></head>
   <body>
     <app-root> </app-root>
-  <script src="runtime.359d5ee4682f20e936e9.js" defer></script><script src="polyfills.a1be0dd6252874026ffd.js" defer></script><script src="scripts.6c21bc1b1e730ebedbaf.js" defer></script><script src="main.662534cdc1d0b0767678.js" defer></script></body>
+  <script src="runtime.359d5ee4682f20e936e9.js" defer></script><script src="polyfills.a1be0dd6252874026ffd.js" defer></script><script src="scripts.6c21bc1b1e730ebedbaf.js" defer></script><script src="main.71fa840aac45688a0ec7.js" defer></script></body>
 </html>
