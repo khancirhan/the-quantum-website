@@ -56,7 +56,7 @@
               </div>
               <div class="form-group col-md-6">
                 <label for="phone">Contact Number</label>
-                <input
+                <!-- <input
                   type="text"
                   id="phone"
                   class="form-control"
@@ -65,7 +65,17 @@
                   ngModel
                   #phoneModel="ngModel"
                   required
-                />
+                /> -->
+                <ngx-intl-tel-input
+                  cssClass="form-control"
+                  [enablePlaceholder]="true"
+                  [searchCountryFlag]="true"
+                  placeholder="Enter mobile number"
+                  name="phone"
+                  ngModel
+                  #phoneModel="ngModel"
+                  required
+                ></ngx-intl-tel-input>
                 <ul
                   class="errors"
                   *ngIf="phoneModel.touched && phoneModel.invalid"

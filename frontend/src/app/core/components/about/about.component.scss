@@ -71,15 +71,20 @@
   }
 
   .item {
+    display: inline-flex;
+    align-items: center;
     margin-top: 2rem;
     font-size: 1.125rem;
     font-weight: 300;
     color: rgba(#000, 0.85);
 
     &::before {
-      content: "*";
-      color: var(--primary);
+      content: "";
       margin-right: 1rem;
+      width: 34px;
+      height: 34px;
+      background-image: url(../../../../assets//icons/tick-outline.svg);
+      background-repeat: no-repeat;
     }
   }
 }
